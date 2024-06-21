@@ -1,0 +1,348 @@
+html, body {font-family: "Noto Sans KR", sans-serif;}
+header {position: fixed; z-index: 999; width: 100%; margin: 0 auto;}
+header .top {
+    padding: 0 60px;
+    background-color: #eee;
+    line-height: 35px;
+}
+header .top img:first-child {margin-right: 30px;}
+header .top img:last-child {}
+header .main_head {
+    height: 60px; padding: 0 60px; background-color: #fff;
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+header .main_head .left {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+header .main_head .left h1 {margin-right: 60px;}
+header .main_head .left h1 a {}
+header .main_head .left h1 a img {}
+header .main_head .left .nav_g {display: flex; flex-flow: row nowrap; align-items: center;}
+header .main_head .left .nav_g a {}
+header .main_head .left .nav_g a img {}
+header .main_head .left .nav_g .gnb {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 60px;
+}
+header .main_head .left .nav_g .gnb a {
+    margin-right: 60px;
+    font-size: 1.125rem;
+    letter-spacing: -0.4px;
+    font-weight: 700;
+    position: relative;
+}
+header .main_head .left .nav_g .gnb a:last-child {margin: 0;}
+header .main_head .left .nav_g .gnb a:hover {color: #CF0A2C;}
+header .main_head .left .nav_g .gnb a:hover::after {
+    content: '';
+    display: inline-block; 
+    width:100%; height: 2.5px;
+    background-color: #CF0A2C;
+    position: absolute;
+    top: 24px; left: 0;
+    animation: nav_hover 0.3s ease;
+}
+@keyframes nav_hover {
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+header .main_head .right {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+header .main_head .right > * {margin-right: 10px;}
+header .main_head .right .search {}
+header .main_head .right .my {}
+header .main_head .right .login_join {
+    display: flex; flex-flow: row nowrap;
+}
+header .main_head .right .login_join a {font-size: 0.875rem;}
+header .main_head .right .login_join a:first-child::after {
+    content: ''; display: inline-block;
+    width: 1px; height: 14px;
+    background-color: #000; margin: 0 10px;
+}
+header .main_head .right .my_cart {margin: 0;}
+/* header -------------------- */
+main {padding: 95px 0 0;/* header 높이 95px */ /* overflow-x: hidden; */}
+main .bg {width:1320px; margin: 0 auto;}
+main .bg .container {text-align: center;}
+main .bg .container .title {margin: 0 0 40px;}
+main .bg .container .title h2 {
+    font-size: 2.125rem; font-weight: 700;
+    padding: 20px 0;
+}
+main .bg .container .title p {font-size: 1.25rem;}
+main .bg .container .product {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    /* background-color: red; */
+}
+main .bg .container .product_scroll {overflow-x: scroll;
+    width: 1250px;}
+main .bg .container .product_scroll::-webkit-scrollbar {background-color: #d9d9d9; height: 10px;}
+main .bg .container .product_scroll::-webkit-scrollbar-thumb {background-color: #444;}
+/* class = "product product_scroll" 제품 리스트 하단 스크롤 디자인 (위) */
+main .bg .container .product > * {margin-bottom: 40px; background-color: yellow;}
+
+main .bg .container .product > * p img {transition: scale 0.5s;}
+main .bg .container .product > *  p img:hover{
+    scale: 1.15;
+    filter: grayscale(100);
+    /* transition: scale 0.5s; */
+}
+main .bg .container .product p {text-align: left; overflow: hidden;}
+main .bg .container .product p:first-child {
+    font-size: 1.125rem; margin: 30px 0 10px;
+    font-weight: 700;
+}
+main .bg .container .product p:last-child {font-size: 1.25rem;}
+main .bg .container a[class*=all] {
+    background-color: #fff; border: 1px solid #000;
+    padding: 13px 52px; border-radius: 5px; font-size: 1.25rem;
+    transition: all 0.4s;
+}
+/* bg container 공통 선택자(위) --------------------------------------------------------------- */
+/* bg container 공통 선택자(위) --------------------------------------------------------------- */
+/* bg container 공통 선택자(위) --------------------------------------------------------------- */
+main .bg1 {width: 100%;}
+main .bg1 .container {}
+main .bg1 .container .bg1_main {}
+main .bg1 .container .bg1_main p {}
+main .bg1 .container .bg1_main p img {width: 100%;}
+main .bg1 .container .info {}
+main .bg1 .container .info .title {margin: 60px 0;}
+main .bg1 .container .info .title h2 {}
+main .bg1 .container .info .title p {}
+main .bg1 .container .info .members_btn {
+    background-color: #fff; border: 1px solid #000;
+    padding: 13px 22px; border-radius: 5px; font-size: 1.25rem;
+    transition: all 0.3s;
+}
+main .bg1 .container .info .members_btn:hover {
+    background-color: #000; color: #fff; 
+}
+main .bg2 {padding: 193px 0 180px;}
+main .bg2 .container {}
+main .bg2 .container .title {}
+main .bg2 .container .title h2 {}
+main .bg2 .container .title p {}
+main .bg2 .container .product {/* 공통선택자 작성 */ padding-bottom: 73px;}
+main .bg2 .container .product a {}
+main .bg2 .container .product a p {}
+main .bg2 .container .product a p img {}
+main .bg2 .container .product a .info {}
+main .bg2 .container .product a .info p {}
+
+main .bg2 .container .all_view_btn {}
+main .bg2 .container .all_view_btn:hover {background-color: #000; color: #fff;}
+/* bg2 */
+main .bg3 {/* background-color: red; */}
+main .bg3 .container {padding: 0 0 20px;}
+main .bg3 .container .tilte {}
+main .bg3 .container .tilte h2 {}
+main .bg3 .container .tilte p {}
+main .bg3 .container .product {padding-bottom: 73px;}
+main .bg3 .container .product a {}
+main .bg3 .container .product a p {}
+main .bg3 .container .product a p img {}
+main .bg3 .container .product a .info {}
+main .bg3 .container .product a .info p {}
+main .bg3 .container .all_view_btn {}
+main .bg3 .container .all_view_btn:hover {
+    background-color: #232323; color: #fff;
+}
+/* bg3 */
+main .bg4 {}
+main .bg4 .container {/* background-color: lime; */ padding: 180px 0}
+main .bg4 .container > p {}
+main .bg4 .container > p img {}
+main .bg4 .container .info {padding: 20px 0 0;}
+main .bg4 .container .info .title {}
+main .bg4 .container .info .title h2 {}
+main .bg4 .container .info .title h2 p {}
+main .bg4 .container .info .btn {}
+main .bg4 .container .info .btn a {
+    width: 180px; line-height: 56px;
+    background-color: #fff; display: inline-block;
+    font-size: 1.25rem; border-radius: 5px;
+    border: 1px solid #000;
+    transition: all 0.4s;
+}
+main .bg4 .container .info .btn a:last-child {
+    background-color: #000; color: #fff;
+    margin-left: 20px;
+}
+main .bg4 .container .info .btn a:hover {background-color: #CF0A2C; color: #fff; border: 0;}
+/* bg4 */
+main .bg5 {/* background-color: yellow; */}
+main .bg5 .container {}
+main .bg5 .container .title {margin: 0; padding: 0; text-align: left;}
+main .bg5 .container .title h2 {}
+main .bg .container .cont {
+    /* bg5,6,7 공통 선택자 */
+    display: flex; flex-flow: row nowrap;
+    align-items: center; justify-content: space-between;
+    width: 1320px;
+}
+main .bg5 .container .cont .product {/* 공통 선택자=  overflow-x: scroll; */ width: calc(100% - 80px);}
+main .bg5 .container .cont .product a {
+    
+    margin-right: 40px;
+}
+main .bg5 .container .cont .product a:last-child {margin:0;}
+main .bg5 .container .cont .product a p {width: 383px;}
+main .bg5 .container .cont .product a p img {width: 100%;}
+main .bg5 .container .cont .product a .info {text-align: left;}
+main .bg5 .container .cont .product a .info h3 {font-size: 1.25rem; font-weight: 700; margin: 30px 0 10px;}
+main .bg5 .container .cont .product a .info p {}
+main .bg .container .cont .product a .go_buy_btn {
+    /* bg5,6,7 공통 선택자 */
+    background-color: #000; color: #fff;
+    width: 120px; line-height: 40px;
+    border-radius: 5px; margin-top: 30px;
+    font-size: 1rem; text-align: center;
+    transition: all 0.4s;
+}
+main .bg .container .cont .product a .go_buy_btn:hover {background-color: #CF0A2C; color: #fff; font-weight: 700;}
+
+main .bg5 .container .cont .btn {} 
+main .bg5 .container .cont .btn #next_btn {
+    border: 0; background-color: #fff;
+} 
+main .bg5 .container .cont .btn #next_btn:hover {
+    background-color: #eee;
+}
+/* bg5 */
+main .bg6 .container .title,
+main .bg7 .container .title,
+main .bg8 .container .title {
+    /* bg 6,7,8 title 오른쪽 정렬*/
+    text-align: left;
+}
+main .bg6 {}
+main .bg6 .container {padding: 180px 0;}
+main .bg6 .container .title {}
+main .bg6 .container .title h2 {}
+main .bg6 .container .cont {}
+main .bg6 .container .cont .product {}
+
+main .bg6 .container .cont .product a,
+main .bg7 .container .cont .product a {margin-right: 40px;}
+
+main .bg6 .container .cont .product a:last-child,
+main .bg7 .container .cont .product a:last-child {margin:0;}
+main .bg6 .container .cont .product a p {}
+main .bg6 .container .cont .product a p img {}
+main .bg6 .container .cont .product a .info {}
+main .bg6 .container .cont .product a .info p {}
+main .bg6 .container .cont .product a .info p {}
+main .bg6 .container .cont .btn {}
+main .bg6 .container .cont .btn #next_btn {}
+/* bg6 */
+main .bg7 {}
+main .bg7 .container {/* background-color: pink; */}
+main .bg7 .container .title {}
+main .bg7 .container .title h2 {}
+main .bg7 .container .cont {}
+main .bg7 .container .cont .product {}
+main .bg7 .container .cont .product a {}
+main .bg7 .container .cont .product a p {}
+main .bg7 .container .cont .product a p img {}
+main .bg7 .container .cont .product a .info {}
+main .bg7 .container .cont .product a .info p {}
+main .bg7 .container .cont .product a .info p {}
+main .bg7 .container .cont .btn {}
+main .bg7 .container .cont .btn #next_btn {}
+/* bg7 */
+main .bg8 {}
+main .bg8 .container {padding:180px 0;}
+main .bg8 .container .title {
+    /* bg 6,7,8 title 오른쪽 정렬*/
+}
+main .bg8 .container .title h2 {}
+main .bg8 .container .product {}
+main .bg8 .container .product a {}
+main .bg8 .container .product a p {}
+main .bg8 .container .product a p img {}
+main .bg8 .container .product a h3 {
+    font-size: 1.5rem; font-weight: 700;
+    margin-top: 40px;
+    position: relative;
+}
+main .bg8 .container .product a h3:hover {color: #CF0A2C; transition: all 0.3s;}
+main .bg8 .container .product a h3:hover::after {background-color:#CF0A2C; transition: all 0.3s;}
+
+main .bg8 .container .product a h3::after {
+    content: ''; display: inline-block;
+    position: absolute;
+    top: 30px; width: 45px; height: 3px;
+    background-color: #000; right: 184px;
+}
+/* bg8 */
+/* main ---------------------- */
+footer {background-color: #232323; color: #fff;}
+footer .container {
+    width: 1320px; margin: 0 auto;
+    padding: 60px 0 30px 43px;
+}
+footer .container .f_top {
+    display: flex; flex-flow: row nowrap;
+    margin-bottom: 140px;
+}
+footer .container .f_top li {margin-right: 120px;}
+footer .container .f_top li:last-child {margin:0;}
+footer .container .f_top li h4 {
+    font-size: 1.5rem; font-weight: 700;
+    margin-bottom: 10px;
+}
+footer .container .f_top li a {font-size: 1.125rem; color: #fff;}
+footer .container .f_top li a:hover {text-decoration: underline;}
+
+footer .container .f_btm {
+    display: flex; flex-flow: row nowrap;
+}
+footer .container .f_btm .left {display: flex; flex-flow: row nowrap;}
+footer .container .f_btm .left li {}
+footer .container .f_btm .left li > * {}
+footer .container .f_btm .left li .tit {font-weight: 700; margin-bottom: 40px;}
+footer .container .f_btm .left li .sub {
+    display: flex; flex-flow: column nowrap;
+}
+footer .container .f_btm .left li .sub a {margin: 0 60px 20px 0; color: #fff;}
+footer .container .f_btm .left li .sub a:last-child {margin: 0 40px 20px 0;}
+footer .container .f_btm li .sub a:hover {text-decoration: underline;}
+
+footer .container .f_btm .right {}
+footer .container .f_btm .right > * {margin-top: 30px;}
+footer .container .f_btm .right > *:first-child {margin:0;}
+footer .container .f_btm .right > *:last-child {margin: 0;}
+footer .container .f_btm .right .sns_list {}
+footer .container .f_btm .right .sns_list a {margin-right: 40px;}
+footer .container .f_btm .right .sns_list a:last-child {margin: 0;}
+footer .container .f_btm .right .info_top {}
+footer .container .f_btm .right .info_top p {margin-bottom: 10px;}
+footer .container .f_btm .right .info_top p a {color: #fff; text-decoration: underline;}
+footer .container .f_btm .right .info_top p a:hover {color: #CF0A2C;}
+footer .container .f_btm .right .info_top p span {}
+
+footer .container .f_btm .right .info_btm {
+}
+footer .container .f_btm .right .info_btm li {}
+footer .container .f_btm .right .info_btm li a:hover {color: #CF0A2C;}
+footer .container .f_btm .right .info_btm li p {margin-bottom: 10px;}
+footer .container .f_btm .right .info_btm li p a {color: #fff; text-decoration: underline;}
+footer .container .f_btm .right .info_btm li:last-child {
+    display: flex; flex-flow: column nowrap;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+footer .container .f_btm .right .info_btm li:last-child img {width: 56px;}
+footer .container .f_btm .right .info_btm li:last-child span {}
+footer .container .f_btm .right .info_btm li:last-child span:nth-child(2) {padding: 20px 0;}
+footer .container .f_btm .right .copy {}

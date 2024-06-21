@@ -1,0 +1,87 @@
+/* 뉴발란스 코리아 반응형 */
+@media screen and (max-width: 1320px) {/* 태블릿 1200px에서 보이는 디자인 */
+    header .main_head {padding: 0 30px;}
+    main .bg {width: calc(100% - 60px); margin: 0 auto;}
+    main .bg .product {width: 100%;}
+    main .bg2 .product > *,
+    main .bg3 .product > * {width: calc((100% - 40px) / 4);}
+    main .bg2 .product > * img,
+    main .bg3 .product > * img {width: 100%; margin: 0 auto;}
+
+    main .bg:nth-child(even) {/* bg 짝수번 padding 여백 */
+        padding: 0; padding: 120px 0;
+    }
+    main .bg:nth-child(even) .container {padding: 0;}
+
+    main .bg4 .container p img {width: 100%;}
+    main .bg .container .cont {
+        /* bg5,6,7 공통 선택자 */
+        display: flex; flex-flow: row nowrap;
+        align-items: center; justify-content: space-between;
+        width: 100%;
+    }
+    main .bg5 .container .cont .product {width: 100% - 40px;}
+
+    main .bg8 .container .product > * {width: calc((100% - 40px) / 3);}
+    main .bg8 .product > *  p img {width: 100%;}
+    main .bg8 .product > * p {margin: 0; padding: 0;}
+    main .bg8 .container .product a h3::after {display: none;}
+
+    footer .container {padding: 60px 30px;}
+    footer .container .f_btm {flex-flow: column nowrap;}
+    footer .container .f_btm .left {margin-bottom: 40px;}
+}
+/* 1200px 태블릿 ======================================== (위) */
+/* 1200px 태블릿 ======================================== (위) */
+
+
+@media screen and (max-width: 1090px) {
+
+    footer .container {padding: 60px 16px;}
+    footer .container .f_top {width: 100%;}
+    footer .container .f_top li {margin-right: 60px;}
+}
+@media screen and (max-width: 1040px) {
+    header .main_head .left .nav_g {display: none;}
+}
+/* ------------------------------------------------------------ 중간가로값 반응형 */
+@media screen and (max-width: 760px) {
+    header .main_head {padding: 0 16px;}
+    header .main_head .left .nav_g {display: block;}
+    header .main_head {position: relative;}
+    header .main_head .left .nav_g {
+        position: absolute; top: 0; left: 0;
+        top: 60px; left: 0;
+        width: 100%; background-color: #fff;
+        height: 44px; padding: 0 16px;
+        display: flex; justify-content: space-between;
+        border-bottom: 1px solid #eee;
+    }
+    header .main_head .left .nav_g .gnb {
+        margin: 0; justify-content: space-between;
+        width: calc(100% / 2);
+    }
+    header .main_head .left .nav_g .gnb a {margin: 0;}
+
+    main {padding: 139px 0 0;/* header 높이 95px + 모바일 하단 nav 44px*/}
+    main .bg .container .title {width: 100%; margin: 0 auto;}
+    main .bg {width: 100%;}
+    main .bg2 .container {/* background-color: pink; */}
+    main .bg2 .container .product {
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    main .bg2 .container .product > a {width: calc((100% - 32px) / 2);}
+
+    main .bg2 .container,
+    main .bg3 .container {
+        width:calc(100% - 16px); margin: 0 auto;
+    }
+    main .bg3 .container .product {
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    main .bg3 .container .product > a {width: calc((100% - 32px) / 2);}
+}
+/* 760px 모바일 ========================================= (위) */
+/* 760px 모바일 ========================================= (위) */
