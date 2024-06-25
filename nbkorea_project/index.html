@@ -14,8 +14,14 @@
     <link rel="stylesheet" href="./styles/main.css">
     <!-- 반응형 -->
     <link rel="stylesheet" href="./styles/responsive.css">
+    <!-- 자바스크립트 -->
+    <script src="./script/script.js" defer></script>
 </head>
 <body>
+    <a href="#" class="top_btn">
+        <p><img src="./images/top_btn.png" alt="맨위로 가기"></p>
+        <p>TOP</p>
+    </a>
     <header>
         <div class="top">
             <img src="./images/langmode.png" alt="다국어 설정">
@@ -26,11 +32,51 @@
                 <h1><a href="#"><img src="./images/logo.png" alt="뉴발란스 코리아"></a></h1>
                 <div class="nav_g">
                     <a href="#"><img src="./images/member_week.png" alt="members week"></a>
-                    <nav class="gnb">
-                        <a href="#">Men</a>
-                        <a href="#">Women</a>
-                        <a href="#">Kids</a>
-                    </nav>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">Men</a>
+                            <ul class="men_sub">
+                                <li>
+                                    <a href="#">NEW</a>
+                                    <a href="#">BEST</a>
+                                    <a href="#">ICONIC BEST</a>
+                                    <a href="#">1906R, Green or Black</a>
+                                    <a href="#">ENJOY SUMMER WITH IU</a>
+                                    <a href="#">연아와 RUN YOUR WAY</a>
+                                    <a href="#">MADE IN USA</a>
+                                </li>
+                                <li>
+                                    <h2>신발</h2>
+                                    <a href="#">전체보기</a>
+                                    <a href="#"></a>
+                                    <ul>
+                                        <li>라이프스타일</li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                    </ul>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                </li>
+                                <li>
+                                    <h2>의류</h2>
+                                    <a href="#">전체보기</a>
+                                </li>
+                                <li>
+                                    <h2>용품</h2>
+                                    <a href="#">전체보기</a>
+                                </li>
+                                <li>
+                                    <h2>스포츠</h2>
+                                    <a href="#">전체보기</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="right">
@@ -140,7 +186,10 @@
         </div>
         <div class="bg bg4">
             <div class="container">
-                <p><img src="./images/bg4_iu_main.jpg" alt=""></p>
+                <p>
+                    <img src="./images/bg4_iu_main.jpg" alt="">
+                    <img src="./images/m_bg4.jpg" alt="">
+                </p>
                 <div class="info">
                     <div class="title">
                         <h2>ENJOY SUMMER WITH IU</h2>
@@ -160,78 +209,80 @@
                 </div>
                 <div class="cont">
                     <div class="product product_scroll">
-                        <a href="#">
-                            <p><img src="./images/bg5_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg5_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <h3>Street Mood with Vintage Detail, 1906R</h3>
-                                <p>1906RRA & 1906RRD</p>
-                            </div>
-                            <p class="go_buy_btn">구매하기</p>
-                        </a>
+                        <div class="bg5_product">
+                            <a href="#">
+                                <p><img src="./images/bg5_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg5_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>Street Mood with Vintage Detail, 1906R</h3>
+                                    <p>1906RRA & 1906RRD</p>
+                                </div>
+                                <p class="go_buy_btn">구매하기</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="btn"><button type="button" id="next_btn"><img src="./images/arrow_next.png" alt="다음 상품 보기"></button></div>
                 </div>
@@ -244,92 +295,96 @@
                 </div>
                 <div class="cont">
                     <div class="product product_scroll">
-                        <a href="#">
-                            <p><img src="./images/bg6_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod04.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod04.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg6_prod04.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
+                        <div class="bg6_product">
+                            <a href="#">
+                                <p><img src="./images/bg6_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod04.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod04.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg6_prod04.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="btn"><a class="next_btn"><img src="./images/arrow_next.png" alt="다음 상품 보기"></a></div>
+                    <div class="btn">
+                        <a class="next_btn"><img src="./images/arrow_next.png" alt="다음 상품 보기"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -340,90 +395,92 @@
                 </div>
                 <div class="cont">
                     <div class="product product_scroll">
-                        <a href="#">
-                            <p><img src="./images/bg7_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod04.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod04.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod01.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod02.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod03.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <p><img src="./images/bg7_prod04.jpg" alt=""></p>
-                            <div class="info">
-                                <p>SD4205BK2</p>
-                                <p>129,000원</p>
-                            </div>
-                        </a>
+                        <div class="bg7_product">
+                            <a href="#">
+                                <p><img src="./images/bg7_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod04.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod04.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod01.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod02.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod03.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <p><img src="./images/bg7_prod04.jpg" alt=""></p>
+                                <div class="info">
+                                    <p>SD4205BK2</p>
+                                    <p>129,000원</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="btn"><a class="next_btn"><img src="./images/arrow_next.png" alt="다음 상품 보기"></a></div>
                 </div>
@@ -504,7 +561,7 @@
                         </div>
                     </li>
                 </ul>
-                <di class="right">
+                <div class="right">
                     <div class="sns_list">
                         <a href="#"><img src="./images/f_insta.png" alt="인스타그램"></a>
                         <a href="#"><img src="./images/f_nbrc.png" alt=""></a>
@@ -539,7 +596,7 @@
                         </li>
                     </ul>
                     <p class="copy">Copyright 2018. New Balance</p>
-                </di>
+                </div>
             </div>
         </div>
     </footer>

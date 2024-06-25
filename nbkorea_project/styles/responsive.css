@@ -1,7 +1,9 @@
 /* 뉴발란스 코리아 반응형 */
 @media screen and (max-width: 1320px) {/* 태블릿 1200px에서 보이는 디자인 */
+    header .top {padding: 0 30px;}
     header .main_head {padding: 0 30px;}
     main .bg {width: calc(100% - 60px); margin: 0 auto;}
+    main .bg1 {width: 100%;}
     main .bg .product {width: 100%;}
     main .bg2 .product > *,
     main .bg3 .product > * {width: calc((100% - 40px) / 4);}
@@ -20,7 +22,7 @@
         align-items: center; justify-content: space-between;
         width: 100%;
     }
-    main .bg5 .container .cont .product {width: 100% - 40px;}
+    main .bg .container .product_scroll {width: calc(100% - 60px);}
 
     main .bg8 .container .product > * {width: calc((100% - 40px) / 3);}
     main .bg8 .product > *  p img {width: 100%;}
@@ -35,8 +37,20 @@
 /* 1200px 태블릿 ======================================== (위) */
 
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1200px) {
+    main .bg5 .container .cont .product .bg5_product {width: calc((100% / 2) * 9);}
+    main .bg5 .container .cont .product .bg5_product a {width: 500px;}
 
+    main .bg6 .container .cont .product .bg6_product,
+    main .bg7 .container .cont .product .bg7_product {
+        display: flex; flex-flow: row nowrap;
+        width: calc((100% / 3) * 12);
+    }
+    main .bg6 .container .cont .product .bg6_product a,
+    main .bg7 .container .cont .product .bg7_product a {width: 320px;}
+}
+
+@media screen and (max-width: 1090px) {
     footer .container {padding: 60px 16px;}
     footer .container .f_top {width: 100%;}
     footer .container .f_top li {margin-right: 60px;}
@@ -47,6 +61,7 @@
 /* ------------------------------------------------------------ 중간가로값 반응형 */
 @media screen and (max-width: 760px) {
     header .main_head {padding: 0 16px;}
+    header .main_head .left h1 {margin: 0;}
     header .main_head .left .nav_g {display: block;}
     header .main_head {position: relative;}
     header .main_head .left .nav_g {
@@ -66,6 +81,7 @@
     main {padding: 139px 0 0;/* header 높이 95px + 모바일 하단 nav 44px*/}
     main .bg .container .title {width: 100%; margin: 0 auto;}
     main .bg {width: 100%;}
+    main .bg .container .product {}
     main .bg2 .container {/* background-color: pink; */}
     main .bg2 .container .product {
         flex-flow: row wrap;
@@ -82,6 +98,67 @@
         width: 100%;
     }
     main .bg3 .container .product > a {width: calc((100% - 32px) / 2);}
+
+    main .bg5 .container .cont .product {width: calc(100% - 60px);}
+    main .bg5 .container .cont .product .bg5_product {
+        width: calc((100% / 2) * 9);
+        justify-content: space-between;
+    }
+    main .bg5 .container .cont .product .bg5_product a {width: 300px; margin-right: 26px;}
+
+    main .bg6 .container .title,
+    main .bg7 .container .title {padding: 0 16px;}
+    main .bg6 .container .cont,
+    main .bg7 .container .cont {padding: 0 16px; width: 100%;}
+
+    main .bg6 .container .cont .product .bg6_product,
+    main .bg7 .container .cont .product .bg7_product {
+        /* background-color: red; */
+        display: flex; flex-flow: row nowrap;
+        width: calc((100% / 2) * 12);
+    }
+    main .bg6 .container .cont .product .bg6_product a,
+    main .bg7 .container .cont .product .bg7_product a {width: 300px;}
+
+    main .bg8 .container .title {padding: 0 16px;}
+    main .bg8 .container .product {padding: 0 16px;}
+    footer .container .f_top {
+        flex-flow: column nowrap;
+    }
+    footer .container .f_top li {margin-bottom: 40px;}
+    footer .container .f_top li:last-child {margin:0;}
+
+
+    main .bg2 .container .title,
+    main .bg3 .container .title,
+    main .bg4 .container .title {
+        /* background-color: red; */ margin-bottom: 40px;
+    }
+    
+    main .bg5 .container {padding: 0 16px;}
+
+    main .bg4 .container > p {padding: 0 16px; margin-bottom: 20px;}
+    main .bg4 .container > p img:first-child {display: none;}
+    main .bg4 .container > p img:last-child {display: block;}
+
 }
 /* 760px 모바일 ========================================= (위) */
 /* 760px 모바일 ========================================= (위) */
+
+@media screen and (max-width: 520px) {
+    main .bg .container .product {padding: 0;}
+    main .bg .container a[class*=all] {
+        width: 100%; display: inline-block;
+    }
+    main .bg1 .container {padding: 0 16px;}
+    main .bg1 .container .info .members_btn {
+        width: 100%; display: inline-block;
+    }
+    main .bg4 .container .info {padding: 0 16px;}
+    main .bg4 .container .info .btn {
+        display: flex; flex-flow: column nowrap; width: 100%;
+    }
+    main .bg4 .container .info .btn .go_details_btn {width: 100%; display: inline-block;}
+    main .bg4 .container .info .btn .go_buy_btn {width: 100%; display: inline-block;}
+    main .bg4 .container .info .btn a:last-child {margin: 0; margin-top: 20px;}
+}
