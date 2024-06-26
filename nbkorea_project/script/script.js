@@ -16,3 +16,35 @@ btn[3].addEventListener('click',function(){
 })
 
 /* a  href="#" 상단 이동 속성 빼기 */
+
+
+const sub_all =  document.querySelectorAll('.sub_all')
+console.log(sub_all)
+
+sub_all[0].style.display = 'none';
+sub_all[1].style.display = 'none';
+sub_all[2].style.display = 'none';
+
+const menu = document.querySelectorAll('.gnb > li')
+console.log(menu)
+menu[0].addEventListener('mouseover', function(){
+    sub_all[0].style.display = 'flex';
+})
+menu[0].addEventListener('mouseout', function(){
+    sub_all[0].style.display = 'none';
+})
+
+
+menu[1].addEventListener('mouseover', function(){
+    sub_all[1].style.display = 'flex';
+})
+menu[1].addEventListener('mouseout', function(){
+    sub_all[1].style.display = 'none';
+})
+
+menu[2].addEventListener('mouseover', function(){
+    sub_all[2].style.display = 'flex';
+})
+menu[2].addEventListener('mouseout', function(){
+    sub_all[2].style.display = 'none';
+})

@@ -10,7 +10,7 @@ html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
 .top_btn p img {}
 .top_btn p:last-child {color: #fff; font-size: 0.75rem;}
 header {position: fixed; z-index: 999; width: 100%; margin: 0 auto;}
-header .top {
+header > .top {
     padding: 0 60px;
     background-color: #eee;
     line-height: 35px;
@@ -42,23 +42,135 @@ header .main_head .left .nav_g .gnb > li {
     margin-right: 60px;
     font-size: 1.125rem;
     letter-spacing: -0.4px;
-    position: relative;
 }
 header .main_head .left .nav_g .gnb > li > a {font-weight: 700;}
-header .main_head .left .nav_g .gnb > li > .men_sub {
+header .main_head .left .nav_g .gnb > li > .sub_all {
     background-color: lime;
-    position: absolute; top: 40px; left: 0;
+    position: absolute; top: 95px; left: 0;
     display: flex; flex-flow: row nowrap;
+    justify-content: flex-start; /* sub메뉴 박스 5개 : 왼쪽 정렬 */
+    width: 100%; padding: 40px 60px;
+    letter-spacing: -0.4px;
 }
-header .main_head .left .nav_g .gnb > li > .men_sub li {}
-header .main_head .left .nav_g .gnb > li > .men_sub li a {}
-header .main_head .left .nav_g .gnb > li > .men_sub li:nth-child(2) ul {}
-header .main_head .left .nav_g .gnb > li > .men_sub li:nth-child(2) ul li {
+/* header .main_head .left .nav_g .gnb > li > .women_sub {display: none;} */
+header .main_head .left .nav_g .gnb > li > .kids_sub {display: none;}
+
+header .main_head .left .nav_g .gnb > li > .sub_all > li {
+    /* ul.sub_all 마우스 올리면 나오는 서브메뉴 박스 영역의 모든 자식 li */
+    margin-right: 50px;
+    background-color: yellow;
+    width: calc((100% / 5) - 40px);
+    display: flex; flex-flow: column nowrap;
+    letter-spacing: -0.4px;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top,
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .btm {
+    display: flex; flex-flow: column nowrap;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li h2 {
+    background-color: red;
+    margin-bottom: 15px; font-size: 1.25rem; font-weight: 700;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li h2 a {font-weight: 700;}
+
+header .main_head .left .nav_g .gnb > li > .sub_all > li > a {
+    background-color: pink;
+    margin-bottom: 15px;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li > a:last-child{margin: 0;}
+
+
+
+header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub {
+    background-color: aqua;
+    padding-left: 15px; margin-bottom: 15px;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub li {
+    background-color: gray;
+    margin-bottom: 10px;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub li:last-child {margin: 0;}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top {margin-bottom: 40px;}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top a,
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .btm a {
+    margin-bottom: 15px;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top a:last-child{margin: 0;}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .btm a:last-child{margin: 0;}
+
+
+
+header .main_head .left .nav_g .gnb > li > a:hover {color: #CF0A2C;}
+
+
+/* 모바일 .gnb > sub =========================================== */
+/* 모바일 .gnb > sub =========================================== */
+header .main_head .left .nav_g .gnb > li > .m_sub {
+    background-color: lime;
+    display: flex; flex-flow: row nowrap; justify-content: flex-start;
+    width: 100%; position: absolute; top: 44px; left: 0;
+    display: none; /* 모바일 서브메뉴 (기본값: 숨기기) */
+}
+header .main_head .left .nav_g .gnb > li > .m_sub > li {
+    background-color: yellow;
+    width: calc(100% / 4);
+    padding: 30px 20px; border-right: 1px solid #000;
+    display:flex; flex-flow: column nowrap;
+}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(1) > h2 {margin-bottom: 15px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(1) > h2 a { font-weight: 700;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(1) a:hover {color: #CF0A2C;} /* hover 공통 선택자 */
+
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) {position: relative;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) a {display: flex; justify-content: space-between; /* 서브메뉴의 세부서브메뉴 옆 화살표 이미지 */}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) a:hover {text-decoration: underline;} /* hover 공통 선택자 */
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div {
+    display:flex; flex-flow: column nowrap;
+    background-color: aqua;
+    display: none;
+}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > * {margin-bottom: 15px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > *:last-child {margin-bottom: 0;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > .sub_of_sub {
+    background-color: aqua;
+    position: absolute;
+    top: 0; left: 100%; width: 100%; height: 100%;
+    padding: 30px 20px;
+}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div:hover + .sub_of_sub {display: flex;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > .sub_of_sub > * {margin-bottom: 15px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > .sub_of_sub > *:last-child {margin-bottom: 0px;}
+
+header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .shoes {
+    display:flex;
     background-color: pink;
 }
-header .main_head .left .nav_g .gnb a:last-child {margin: 0;}
-header .main_head .left .nav_g .gnb a:hover {color: #CF0A2C;}
-header .main_head .left .nav_g .gnb a:hover::after {
+/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .shoes a:nth-child(3)::after {
+    content: ''; display: inline-block;
+    width: 20px; height: 20px;
+    background-image: url(../images/submenu_right_arrow.png);
+    background-repeat: no-repeat;
+    margin-left: 20px;
+} */
+/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .cloths {
+    display:flex;
+    background-color: gray;
+} */
+/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .items {
+    display:flex;
+    background-color: pink;
+} */
+/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .underware {
+    display:flex;
+    background-color: gray;
+} */
+/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .sports {
+    display:flex;
+    background-color: pink;
+} */
+/* 모바일 .gnb > sub =========================================== */
+
+/* header .main_head .left .nav_g .gnb > li > a:hover::after {
     content: '';
     display: inline-block; 
     width:100%; height: 2.5px;
@@ -66,7 +178,7 @@ header .main_head .left .nav_g .gnb a:hover::after {
     position: absolute;
     top: 24px; left: 0;
     animation: nav_hover 0.3s ease;
-}
+} */
 @keyframes nav_hover {
     0% {width: 0;}
     100% {width: 100%;}
