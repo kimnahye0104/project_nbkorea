@@ -76,14 +76,13 @@
     header .main_head .left .nav_g .gnb > li {
         margin: 0 0 0 40px;
     }
-    header .main_head .left .nav_g .gnb > li > .sub_all {display: none;}
     main {padding: 139px 0 0;/* header 높이 95px + 모바일 하단 nav 44px*/}
+    /* header .main_head .left .nav_g .gnb > li > .sub_all {background-color: red; top: 44px;} */
 
-    /* header .main_head .left .nav_g .gnb > li > .m_sub {display: flex;} */
-    header .main_head .left .nav_g .gnb > li > .m_women {display: flex;}
-    /* header .main_head .left .nav_g .gnb > li > .m_kids {display: flex;} */
-    header .main_head .left .nav_g .gnb > li > .m_women > li:nth-child(2) .shoes {display: none;}
-    header .main_head .left .nav_g .gnb > li > .m_women > li:nth-child(2) .cloths {display: flex;}
+    header .main_head .left .nav_g .gnb > li > .m_sub {top: 44px;}
+    header .main_head .left .nav_g .gnb > li > .m_men {display: flex;} /* men 서브 전체 */
+    /* header .main_head .left .nav_g .gnb > li > .m_women {display: flex;} */ /* women 서브 전체 */
+    /* header .main_head .left .nav_g .gnb > li > .m_kids {display: flex;} */ /* kids 서브 전체 */
 }
 /* ------------------------------------------------------------ 중간가로값 반응형 */
 @media screen and (max-width: 760px) {

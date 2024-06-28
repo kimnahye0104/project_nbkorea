@@ -43,9 +43,18 @@ header .main_head .left .nav_g .gnb > li {
     font-size: 1.125rem;
     letter-spacing: -0.4px;
 }
-header .main_head .left .nav_g .gnb > li > a {font-weight: 700;}
+header .main_head .left .nav_g .gnb > li > a {
+    font-weight: 700;
+    /* 자바스크립트 li>a의 서브 메뉴 박스 마우스 over, out 기능 되게 하기 
+        a의 높이와 여백이 없어서 마우스 out 되었을때 서브메뉴가 나오지 않는 현상 발생.
+        a에 높이를 줌으로써 해결
+    */
+    display: inline-block;
+    line-height: 60px; /* header 높이 60px */
+}
 header .main_head .left .nav_g .gnb > li > .sub_all {
-    background-color: lime;
+    /* background-color: lime; */
+    background-color: #fff;
     position: absolute; top: 95px; left: 0;
     display: flex; flex-flow: row nowrap;
     justify-content: flex-start; /* sub메뉴 박스 5개 : 왼쪽 정렬 */
@@ -58,37 +67,42 @@ header .main_head .left .nav_g .gnb > li > .kids_sub {display: none;}
 header .main_head .left .nav_g .gnb > li > .sub_all > li {
     /* ul.sub_all 마우스 올리면 나오는 서브메뉴 박스 영역의 모든 자식 li */
     margin-right: 50px;
-    background-color: yellow;
     width: calc((100% / 5) - 40px);
     display: flex; flex-flow: column nowrap;
     letter-spacing: -0.4px;
 }
-header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top,
-header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .btm {
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) > ul {
     display: flex; flex-flow: column nowrap;
 }
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) > ul:first-child {margin-bottom: 40px;}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) > ul li {
+    margin-bottom: 15px;
+}
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) > ul li:first-child,
+header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) > ul li:last-child {margin: 0;}
+
 header .main_head .left .nav_g .gnb > li > .sub_all > li h2 {
-    background-color: red;
     margin-bottom: 15px; font-size: 1.25rem; font-weight: 700;
 }
 header .main_head .left .nav_g .gnb > li > .sub_all > li h2 a {font-weight: 700;}
 
-header .main_head .left .nav_g .gnb > li > .sub_all > li > a {
-    background-color: pink;
+header .main_head .left .nav_g .gnb > li > .sub_all > * > a {
+    /* background-color: pink; */
     margin-bottom: 15px;
 }
 header .main_head .left .nav_g .gnb > li > .sub_all > li > a:last-child{margin: 0;}
-
+header .main_head .left .nav_g .gnb > li > .sub_all > * > a:hover {text-decoration: underline;}
 
 
 header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub {
-    background-color: aqua;
+    /* background-color: aqua; */
     padding-left: 15px; margin-bottom: 15px;
 }
 header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub li {
-    background-color: gray;
+    /* background-color: gray; */
     margin-bottom: 10px;
 }
+header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub li:hover {text-decoration: underline;}
 header .main_head .left .nav_g .gnb > li > .sub_all > li .sub_of_sub li:last-child {margin: 0;}
 header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top {margin-bottom: 40px;}
 header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top a,
@@ -97,13 +111,16 @@ header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .btm a {
 }
 header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .top a:last-child{margin: 0;}
 header .main_head .left .nav_g .gnb > li > .sub_all > li:nth-child(4) .btm a:last-child{margin: 0;}
-
-
-
 header .main_head .left .nav_g .gnb > li > a:hover {color: #CF0A2C;}
 
+header .main_head .left .nav_g .gnb > li > .sub_all > li ul.items li a:hover,
+header .main_head .left .nav_g .gnb > li > .sub_all > li ul.underware li a:hover {
+    /* 용품, 언더웨어 묶음 박스 안의 메뉴들 */
+    /* background-color: red; */
+    text-decoration: underline;
+}
 
-/* 모바일 .gnb > sub =========================================== */
+/* 모바일 .gnb > sub ============================================================================ */
 /* 모바일 .gnb > sub =========================================== */
 header .main_head .left .nav_g .gnb > li > .m_sub {
     background-color: lime;
@@ -117,72 +134,39 @@ header .main_head .left .nav_g .gnb > li > .m_sub > li {
     padding: 30px 20px; border-right: 1px solid #000;
     display:flex; flex-flow: column nowrap;
 }
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(1) > h2 {margin-bottom: 15px;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(1) > h2 a { font-weight: 700;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(1) a:hover {color: #CF0A2C;} /* hover 공통 선택자 */
+header .main_head .left .nav_g .gnb > li > .m_sub > li:first-child { /* ul > li 2개 중 1 */
+    background-color: red;
+    width: 120px;
+}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:first-child h2 {margin-bottom: 15px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:first-child h2:last-child {margin-bottom: 0px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child { /* ul > li 2개 중 2(마지막) */
+    background-color: pink;
+    width: calc((100% - 120px) / 2);
+    position: relative;
+}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul {display: none;} /* 두번째 서브박스 숨기고 디자인할 박스 block 상태 */
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul:nth-child(odd) {background-color: gray;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul > li {margin-bottom: 15px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul > li:last-child {margin-bottom: 0px;}
 
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) {position: relative;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) a {display: flex; justify-content: space-between; /* 서브메뉴의 세부서브메뉴 옆 화살표 이미지 */}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) a:hover {text-decoration: underline;} /* hover 공통 선택자 */
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div {
-    display:flex; flex-flow: column nowrap;
-    background-color: aqua;
-    display: none;
+/* 서브의 서브메뉴 (아래)*/
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul > li ul.sub_of_sub {
+    position: absolute; top: 0; left: 100%;
+    width: 100%; padding: 30px 20px;
+    background-color: yellow;
 }
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > * {margin-bottom: 15px;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > *:last-child {margin-bottom: 0;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > .sub_of_sub {
-    background-color: aqua;
-    position: absolute;
-    top: 0; left: 100%; width: 100%; height: 100%;
-    padding: 30px 20px;
-}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div:hover + .sub_of_sub {display: flex;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > .sub_of_sub > * {margin-bottom: 15px;}
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > div > .sub_of_sub > *:last-child {margin-bottom: 0px;}
-
-header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .shoes {
-    display:flex;
-    background-color: pink;
-}
-/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .shoes a:nth-child(3)::after {
-    content: ''; display: inline-block;
-    width: 20px; height: 20px;
-    background-image: url(../images/submenu_right_arrow.png);
-    background-repeat: no-repeat;
-    margin-left: 20px;
-} */
-/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .cloths {
-    display:flex;
-    background-color: gray;
-} */
-/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .items {
-    display:flex;
-    background-color: pink;
-} */
-/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .underware {
-    display:flex;
-    background-color: gray;
-} */
-/* header .main_head .left .nav_g .gnb > li > .m_sub > li:nth-child(2) > .sports {
-    display:flex;
-    background-color: pink;
-} */
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul > li ul.sub_of_sub li {margin-bottom: 15px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul > li ul.sub_of_sub li:last-child {margin-bottom: 0px;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child ul.shoes {}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child ul.cloths {display: block;}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child ul.items {}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child ul.underware {}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child ul.sports {}
+header .main_head .left .nav_g .gnb > li > .m_sub > li:last-child > ul > li > a {background-color: purple; display: flex; justify-content: space-between;}
 /* 모바일 .gnb > sub =========================================== */
+/* 모바일 .gnb > sub ============================================================================= */
 
-/* header .main_head .left .nav_g .gnb > li > a:hover::after {
-    content: '';
-    display: inline-block; 
-    width:100%; height: 2.5px;
-    background-color: #CF0A2C;
-    position: absolute;
-    top: 24px; left: 0;
-    animation: nav_hover 0.3s ease;
-} */
-@keyframes nav_hover {
-    0% {width: 0;}
-    100% {width: 100%;}
-}
 header .main_head .right {
     display: flex; flex-flow: row nowrap;
     align-items: center;

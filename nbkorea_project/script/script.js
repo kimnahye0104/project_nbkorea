@@ -25,6 +25,7 @@ sub_all[0].style.display = 'none';
 sub_all[1].style.display = 'none';
 sub_all[2].style.display = 'none';
 
+/* men ================================================= */
 const menu = document.querySelectorAll('.gnb > li')
 console.log(menu)
 menu[0].addEventListener('mouseover', function(){
@@ -34,7 +35,7 @@ menu[0].addEventListener('mouseout', function(){
     sub_all[0].style.display = 'none';
 })
 
-
+/* women ================================================= */
 menu[1].addEventListener('mouseover', function(){
     sub_all[1].style.display = 'flex';
 })
@@ -42,6 +43,7 @@ menu[1].addEventListener('mouseout', function(){
     sub_all[1].style.display = 'none';
 })
 
+/* kids ================================================= */
 menu[2].addEventListener('mouseover', function(){
     sub_all[2].style.display = 'flex';
 })
