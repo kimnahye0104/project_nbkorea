@@ -56,33 +56,14 @@
     footer .container .f_top li {margin-right: 60px;}
 }
 @media screen and (max-width: 1040px) {
-    header .main_head .left .nav_g {display: none;}
     header .main_head {padding: 0 16px;}
     header .main_head .left h1 {margin: 0;}
     header .main_head .left .nav_g {display: block;}
     header .main_head {position: relative;}
-    header .main_head .left .nav_g {
-        position: absolute; top: 0; left: 0;
-        top: 60px; left: 0;
-        width: 100%; background-color: #fff;
-        height: 44px; padding: 0 16px;
-        display: flex; justify-content: space-between;
-        border-bottom: 1px solid #eee;
-    }
-    header .main_head .left .nav_g .gnb {
-        margin: 0; justify-content: flex-start;
-        width: 100%;
-    }
-    header .main_head .left .nav_g .gnb > li {
-        margin: 0 0 0 40px;
-    }
-    main {padding: 139px 0 0;/* header 높이 95px + 모바일 하단 nav 44px*/}
-    /* header .main_head .left .nav_g .gnb > li > .sub_all {background-color: red; top: 44px;} */
 
-    header .main_head .left .nav_g .gnb > li > .m_sub {top: 44px;}
-    header .main_head .left .nav_g .gnb > li > .m_men {display: flex;} /* men 서브 전체 */
-    /* header .main_head .left .nav_g .gnb > li > .m_women {display: flex;} */ /* women 서브 전체 */
-    /* header .main_head .left .nav_g .gnb > li > .m_kids {display: flex;} */ /* kids 서브 전체 */
+
+    header .main_head .left .nav_g {display: none;}
+    header .main_head .left .m_nav_g {display: flex;}
 }
 /* ------------------------------------------------------------ 중간가로값 반응형 */
 @media screen and (max-width: 760px) {
@@ -148,6 +129,7 @@
     main .bg4 .container > p img:first-child {display: none;}
     main .bg4 .container > p img:last-child {display: block;}
 
+    header .main_head .left .m_nav_g > a img {width: calc(100%);}
 }
 /* 760px 모바일 ========================================= (위) */
 /* 760px 모바일 ========================================= (위) */
@@ -168,4 +150,8 @@
     main .bg4 .container .info .btn .go_details_btn {width: 100%; display: inline-block;}
     main .bg4 .container .info .btn .go_buy_btn {width: 100%; display: inline-block;}
     main .bg4 .container .info .btn a:last-child {margin: 0; margin-top: 20px;}
+
+
+    header .main_head .left .m_nav_g > a {margin-right: 20px;}
+    header .main_head .left .m_nav_g .gnb > li {margin-right: 30px;}
 }

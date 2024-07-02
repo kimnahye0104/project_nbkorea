@@ -1,0 +1,143 @@
+html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
+/* scroll 공통 design */
+.scroll {
+    overflow-x: scroll;
+}
+.scroll::-webkit-scrollbar {background-color: #d9d9d9; height: 10px;}
+.scroll::-webkit-scrollbar-thumb {background-color: #444;}
+
+main {}
+/* bg 공통 선택자 */
+main .bg {text-align: center;}
+main .bg .container {width: 1320px; margin: 0 auto;}
+/* bg 짝수 상하 여백 180px */
+main .bg:nth-child(2n) {padding: 180px 0;}
+/* 메인이미지 포함한 bg h2, p */
+main .bg .container .info .title {text-align: center; margin: 60px 0;}
+main .bg .container .info .title h2 {font-size: 2.75rem; font-weight: 700; margin-bottom: 20px;}
+main .bg .container .info .title p {font-size: 1.25rem;}
+main .bg .container > p img {width: 100%;}
+/* .product_list 공통 선택자 : bg2, bg6 적용 */
+main .bg2, main .bg6 {}
+main .bg2 .container, main .bg6 .container {
+    width: 1320px; margin: 0 auto;
+}
+main .bg .container .top {
+    margin-bottom: 40px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+}
+main .bg .container .top h2 {font-size: 2.125rem; font-weight: 700;}
+main .bg .container .top a {font-size: 1.25rem;}
+main .bg .container .top a::after {
+    content: '';
+    background-image: url(../images/bg2bg6_arrow.png);
+    width: 24px; height: 24px; display: inline-block;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+}
+main .bg .container .product {
+    width: 100%;
+}
+main .bg .container .product_list {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    width: calc((100% / 4) * 8);
+}
+main .bg .container .product_list li {
+    width: calc(100% / 4);
+    margin-bottom: 40px; margin-right: 40px;
+}
+main .bg .container .product_list li:last-child {margin: 0;}
+main .bg .container .product_list li a {}
+main .bg .container .product_list li a > p {margin-bottom: 30px;}
+main .bg .container .product_list li a > p img {width: 100%;}
+main .bg .container .product_list li a .p_info {text-align: left;}
+main .bg .container .product_list li a .p_info p:first-child {margin-bottom: 10px;}
+main .bg .container .product_list li a .p_info p:last-child {font-size: 1.25rem; font-weight: 700;}
+
+/* .btn 더알아보기, 구매하기 공통 선택자 */
+main .bg .container .info .btn {text-align: center;}
+main .bg .container .info .btn a {
+    width: 120px; line-height: 40px;
+    border-radius: 5px; margin-top: 30px;
+    font-size: 1rem; text-align: center;
+    transition: all 0.4s; display: inline-block;
+}
+main .bg .container .info .btn .go_details_btn {
+    /* bg5,6,7 공통 선택자 */
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-right: 20px;
+}
+main .bg .container .info .btn .go_buy_btn {
+    /* bg5,6,7 공통 선택자 */
+    background-color: #000; color: #fff;
+}
+main .bg1 {} /* bg1===================== */
+main .bg1 .container {width: 100%;}
+main .bg1 .container .sub_head {padding: 96px 0;}
+main .bg1 .container .sub_head h1 {font-size: 3.5rem; font-weight: 700; margin-bottom: 40px;}
+main .bg1 .container .sub_head .women_menu {}
+main .bg1 .container .sub_head .women_menu a {font-size: 1.625rem;}
+main .bg1 .container p {}
+main .bg1 .container p img {}
+main .bg1 .container .info {}
+main .bg1 .container .info .title {}
+main .bg1 .container .info .title h2 {}
+main .bg1 .container .info .title p {}
+main .bg1 .container .info .btn {}
+main .bg1 .container .info .btn a {}
+main .bg2 {} /* bg2===================== */
+main .bg2 .container {}
+main .bg2 .container .top {}
+main .bg2 .container .top h2 {}
+main .bg2 .container .top a {}
+main .bg2 .container .product_list {}
+main .bg2 .container .product_list li {}
+main .bg2 .container .product_list li p {}
+main .bg2 .container .product_list li p img {}
+main .bg2 .container .product_list li .p_info {}
+main .bg2 .container .product_list li .p_info p {}
+main .bg3 {} /* bg3===================== */
+main .bg3 .container p {}
+main .bg3 .container p img {}
+main .bg3 .container .info {}
+main .bg3 .container .info .title {}
+main .bg3 .container .info .title h2 {}
+main .bg3 .container .info .title p {}
+main .bg3 .container .info .btn {}
+main .bg3 .container .info .btn a {}
+main .bg4 {} /* bg4===================== */
+main .bg4 .container p {}
+main .bg4 .container p img {}
+main .bg4 .container .info {}
+main .bg4 .container .info .title {}
+main .bg4 .container .info .title h2 {}
+main .bg4 .container .info .title p {}
+main .bg4 .container .info .btn {}
+main .bg4 .container .info .btn a {}
+main .bg5 {} /* bg5===================== */
+main .bg5 .container {text-align: left;}
+main .bg5 .container h2 {font-size: 3.125rem; font-weight: 700; margin-bottom: 40px;}
+main .bg5 .container .product_list {
+    width: 100%;
+}
+main .bg5 .container .product_list li {
+    width: calc(100% / 3);
+    margin-right: 40px;
+    text-align: center;
+}
+main .bg5 .container .product_list li a {}
+main .bg5 .container .product_list li a img {width: 100%; margin-bottom: 40px;}
+main .bg5 .container .product_list li a span {font-size: 1.5rem; font-weight: 700;}
+main .bg6 {} /* bg6===================== */
+main .bg6 .container .top {}
+main .bg6 .container .top h2 {}
+main .bg6 .container .top a {}
+main .bg6 .container .product_list {}
+main .bg6 .container .product_list li {}
+main .bg6 .container .product_list li p {}
+main .bg6 .container .product_list li p img {}
+main .bg6 .container .product_list li .p_info {}
+main .bg6 .container .product_list li .p_info p {}
