@@ -6,7 +6,7 @@ html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
 .scroll::-webkit-scrollbar {background-color: #d9d9d9; height: 10px;}
 .scroll::-webkit-scrollbar-thumb {background-color: #444;}
 
-main {}
+main {padding-top: 95px;}
 /* bg 공통 선택자 */
 main .bg {text-align: center;}
 main .bg .container {width: 1320px; margin: 0 auto;}
@@ -64,7 +64,11 @@ main .bg .container .product_list li:hover > a p img {
 main .bg .container .product_list li a > p img {width: 100%;}
 main .bg .container .product_list li a .p_info {text-align: left;}
 main .bg .container .product_list li a .p_info p:first-child {margin-bottom: 10px;}
-main .bg .container .product_list li a .p_info p:last-child {font-size: 1.25rem; font-weight: 700;}
+main .bg .container .product_list li a .p_info p:last-child {
+    font-size: 1.25rem; font-weight: 700;
+    font-family: 'Pretendard-Regular'; /* 가격(숫자)용 폰트 적용 : 프리텐다드 */
+    letter-spacing: -0.6px;
+}
 
 /* .btn 더알아보기, 구매하기 공통 선택자 */
 main .bg .container .info .btn {text-align: center;}
@@ -91,10 +95,29 @@ main .bg .container .info .btn .go_buy_btn:hover {
 }
 main .bg1 {} /* bg1===================== */
 main .bg1 .container {width: 100%;}
-main .bg1 .container .sub_head {padding: 96px 0;}
-main .bg1 .container .sub_head h1 {font-size: 3.5rem; font-weight: 700; margin-bottom: 40px;}
+main .bg1 .container .sub_head {padding: 40px 0 80px;}
+main .bg1 .container .sub_head h1 {font-size: 3rem; font-weight: 700; margin-bottom: 40px; letter-spacing: -4px;}
 main .bg1 .container .sub_head .women_menu {}
-main .bg1 .container .sub_head .women_menu a {font-size: 1.625rem;}
+main .bg1 .container .sub_head .women_menu a {
+    font-size: 1.125rem; margin-right: 80px;
+    position: relative;
+}
+main .bg1 .container .sub_head .women_menu a:last-child {margin-right: 0px;}
+main .bg1 .container .sub_head .women_menu a:hover {color: #CF0A2C;}
+main .bg1 .container .sub_head .women_menu a::after {
+    /* 글자 옆 수직 구분 선 디자인 */
+    content: ''; display: inline-block;
+    width: 1px; height: 100%; background-color: #ddd;
+    position: absolute; top: 0; right: -40px;
+}
+main .bg1 .container .sub_head .women_menu a:last-child:after {display: none;}
+main .bg1 .container .sub_head .women_menu a::before {
+    content: ''; display: inline-block;
+    width: 0%; height: 1px; background-color: #CF0A2C;
+    position: absolute; bottom: -5px; left: 0;
+    transition: all 0.3s;
+}
+main .bg1 .container .sub_head .women_menu a:hover::before {width: 100%;}
 main .bg1 .container p {}
 main .bg1 .container p img {}
 main .bg1 .container .info {}

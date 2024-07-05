@@ -12,17 +12,16 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <!-- 디자인 -->
     <link rel="stylesheet" href="./styles/sub1.css">
-    <!-- header, footer php 연결 + 디자인용 css 연결 -->
-    <link rel="stylesheet" href="./styles/header_footer.css">
+    <!-- header, footer 공통 css 연결 -->
+    <link rel="stylesheet" href="./styles/common.css">
     <!-- 반응형 -->
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/sub1_responsive.css">
     <!-- 자바스크립트 -->
-    <script src="./script/script.js" defer></script>
+    <script src="./script/common.js" defer></script>
 </head>
 <body>
-    <!-- php 연결 (top_btn & header) -->
-    <?php include("./header.php"); ?>
+    <?php include("./header.php"); ?><!-- php 연결 (top_btn & header) -->
     <main>
         <div class="bg bg1">
             <div class="container">
@@ -274,7 +273,6 @@
             </div>
         </div> 
     </main>
-    <!-- php 연결 (footer) -->
-    <?php include("./footer.php"); ?>
+    <?php include("./footer.php"); ?><!-- php 연결 (footer) -->
 </body>
 </html>
