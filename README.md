@@ -8,9 +8,10 @@
 ## PROTOTYPE (프로토타입)
 
 ### 주소 (url)
-**메인 페이지** `<http://knhweb.dothome.co.kr/project/nbkorea_project/index.html>`
-**서브 페이지 (2개)**
-* `<http://knhweb.dothome.co.kr/project/nbkorea_project/sub1.html>`
+#### 메인 페이지
+<http://knhweb.dothome.co.kr/project/nbkorea_project/index.html>
+#### 서브 페이지 (2개)
+* <http://knhweb.dothome.co.kr/project/nbkorea_project/sub1.html>
 * 
 
 ### PRODUCER INFO
