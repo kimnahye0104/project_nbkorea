@@ -4,8 +4,16 @@
     </a>
     <header>
         <div class="top">
-            <img src="./images/langmode.png" alt="다국어 설정">
-            <img src="./images/mynb.png" alt="마이엔비">
+            <div class="left">
+                <img src="./images/langmode.png" alt="다국어 설정">
+                <img src="./images/mynb.png" alt="마이엔비">
+            </div>
+            <div class="right">
+                <span>매장찾기</span>
+                <span>공지사항</span>
+                <span>FAQS</span>
+                <span>이벤트</span>
+            </div>
         </div>
         <div class="main_head">
             <div class="left">

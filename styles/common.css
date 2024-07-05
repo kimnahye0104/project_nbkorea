@@ -13,15 +13,25 @@ header {position: fixed; z-index: 999; width: 100%; margin: 0 auto;}
 header > .top {
     padding: 0 60px;
     background-color: #eee;
-    line-height: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-header .top img:first-child {margin-right: 30px;}
-header .top img:last-child {}
+header > .top .left {}
+header .top .left img:first-child {margin-right: 30px;}
+header .top .left img:last-child {}
 header .main_head {
     height: 60px; padding: 0 60px; background-color: #fff;
     display: flex; flex-flow: row nowrap;
     align-items: center; justify-content: space-between;
     border-bottom: 1px solid #eee;
+}
+header > .top .right {}
+header > .top .right span {
+    font-size: 0.875rem; color: #808080;
+    border-right: 1px solid #dbdbdb;
+    padding-right: 20px;
 }
 header .main_head .left {
     display: flex; flex-flow: row nowrap;

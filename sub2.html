@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴발란스 코리아 | 상품 전체보기 </title>
+    <!-- 웹글꼴 : Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 디자인 -->
+    <link rel="stylesheet" href="./styles/sub2.css">
+    <!-- header, footer 공통 css 연결 -->
+    <link rel="stylesheet" href="./styles/common.css">
+    <!-- 자바스크립트 -->
+    <script src="./script/common.js" defer></script>
+</head>
+<body>
+    <?php include("./header.php"); ?><!-- php 연결 (top_btn & header) -->
+    <main>
+        <div class="left_oction">
+            <div class="cont">
+                <div class="title">
+                    <h1>ALL</h1>
+                    <p><img src="./images/icon_sub2_title_right_arrow.png" alt=""></p>
+                    <h2>의류</h2>
+                </div>
+                <div class="oction part">
+                    <div class="tit">
+                        <span>분류</span>
+                        <img src="./images/icon_oction_off.png" alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_all">
+                            <label for="oction_part_all">전체보기</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_tshart">
+                            <label for="oction_part_tshart">티셔츠</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_pantsall">
+                            <label for="oction_part_pantsall">팬츠 전체</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_pantsshort">
+                            <label for="oction_part_pantsshort">숏팬츠</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_pantslong">
+                            <label for="oction_part_pantslong">롱팬츠</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_sleeveless">
+                            <label for="oction_part_sleeveless">슬리브리스</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_bratop">
+                            <label for="oction_part_bratop">브라탑</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_poloshirt">
+                            <label for="oction_part_poloshirt">폴로셔츠</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_skirt">
+                            <label for="oction_part_skirt">스커트/원피스</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_rashguard">
+                            <label for="oction_part_rashguard">래쉬가드</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_jacket">
+                            <label for="oction_part_jacket">바람막이/자켓</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="part_oction" id="oction_part_hood">
+                            <label for="oction_part_hood">후드티/맨투맨</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="oction adult">
+                    <div class="tit">
+                        <span>일반</span>
+                        <img src="./images/icon_oction_off.png" alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="adult_oction" id="oction_adult_all">
+                            <label for="oction_adult_all">공용</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="adult_oction" id="oction_adult_men">
+                            <label for="oction_adult_men">남자</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="adult_oction" id="oction_adult_women">
+                            <label for="oction_adult_women">여자</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="oction kids">
+                    <div class="tit">
+                        <span>키즈</span>
+                        <img src="./images/icon_oction_off.png" alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="kids_oction" id="oction_kids_all">
+                            <label for="oction_kids_all">공용</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="kids_oction" id="oction_kids_men">
+                            <label for="oction_kids_men">남아</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="adult_oction" id="oction_kids_women">
+                            <label for="oction_kids_women">여아</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="oction size">
+                    <div class="tit">
+                        <span>사이즈</span>
+                        <img src="./images/icon_oction_off.png" alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_75s">
+                            <label for="oction_size_75s">75 (S)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_80m">
+                            <label for="oction_size_80m">80 (M)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_85l">
+                            <label for="oction_size_85l">85 (L)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_85s">
+                            <label for="oction_size_85s">85 (S)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_90m">
+                            <label for="oction_size_90m">90 (M)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_90s">
+                            <label for="oction_size_90s">90 (S)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_90xl">
+                            <label for="oction_size_90xl">90 (XL)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_95l">
+                            <label for="oction_size_95l">95 (L)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_95m">
+                            <label for="oction_size_95m">95 (M)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_100l">
+                            <label for="oction_size_100l">100 (L)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_105xl">
+                            <label for="oction_size_105xl">105 (XL)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="size_oction" id="oction_size_110xxl">
+                            <label for="oction_size_110xxl">110 (XXL)</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right_main">
+            <div class="top">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="include_soldeout" id="include_soldeout">
+                        <label for="include_soldeout">품절 상품 포함</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="inclue_soldeout" id="include_sale">
+                        <label for="include_sale">SALE 상품 포함</label>
+                    </li>
+                </ul>
+                <select name="display_order" id="display_order">
+                    <option value="new">신상품순</option>
+                    <option value="best">베스트상품순</option>
+                    <option value="price_low">낮은가격순</option>
+                    <option value="price_high">높은가격순</option>
+                </select>
+            </div>
+            <div class="bg bg1">
+                <div class="container">
+    
+                </div>
+            </div>
+        </div>
+    </main>
+    <?php include("./footer.php"); ?><!-- php 연결 (footer) -->
+</body>
+</html>

@@ -1,1 +1,151 @@
 html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
+main {
+    width: 100%;
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding-top: 95px;
+}
+main .left_oction {
+    /* background-color: lightgreen; */
+    width: 340px;
+    padding: 40px 0px;
+    background-color: #fff;
+    position: fixed; top: 95px; left: 0;
+}
+main .left_oction .cont {padding:0 60px; overflow-y: scroll;}
+main .left_oction .title {
+    width: 100%;
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    padding: 20px 0;
+}
+main .left_oction .title > * {margin-right: 10px;}
+main .left_oction .title > *:last-child {margin: 0;}
+main .left_oction .title h1, main .left_oction .title h2 {font-size: 1.25rem; font-weight: 700;}
+main .left_oction .title h1 {}
+main .left_oction .title p {}
+main .left_oction .title p img {}
+main .left_oction .title h2 {}
+
+main .left_oction .oction {
+    /* oction별 영역 공통 디자인 선택자 */
+    padding: 15px 0;
+    border-top: 0.5px solid #ddd;
+}
+main .left_oction .oction:last-child {
+    border: 0.5px solid #ddd;
+    border-left: 0; border-right: 0;
+}
+main .left_oction .oction .tit {
+    width: 100%;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    margin-bottom: 15px;
+}
+main .left_oction .oction ul {
+    /*옵션 (분류,일반, 키즈 등.. tit 아래 세부 옵션 영역*/
+    width: 100%;
+    display: flex; flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main .left_oction .oction ul li input[id^=oction] {display: none;}
+main .left_oction .oction ul li label[for^=oction] {
+    font-size: 0.875rem; letter-spacing: -0.4px;
+}
+
+/* 분류, 사이즈, 가격 공통 디자인 선택자 (아래) */
+main .left_oction .oction ul li {
+    width: calc((100% / 2) - 5px);
+    margin-bottom: 10px;
+}
+main .left_oction .size ul li {width: calc((100% / 3) - 5px);}
+main .left_oction .oction ul li label[for*=part],
+main .left_oction .oction ul li label[for*=size],
+main .left_oction .oction ul li label[for*=price] {
+    background-color: #fff;
+    border: 0.5px solid #ddd; border-radius: 3px;
+    padding: 8px 0px; text-align: center;
+    width: 100%; display: inline-block;
+}
+main .left_oction .oction ul li input[id*=part]:checked + label,
+main .left_oction .oction ul li input[id*=size]:checked + label,
+main .left_oction .oction ul li input[id*=price]:checked + label {
+    background-color: #333; color: #fff;
+}
+/* 분류, 사이즈, 가격 공통 디자인 선택자 (위) */
+/* --------------------------- 옵션 input 등 공통 선택자 (위) */
+/* --------------------------- 옵션 input 등 공통 선택자 (위) */
+main .left_oction .part {
+    /* background-color: yellow; */
+}
+main .left_oction .part .tit {/* 공통 선택자 작성 */}
+main .left_oction .part .tit span {}
+main .left_oction .part .tit img {}
+main .left_oction .part ul {/* 공통 선택자 작성 */}
+main .left_oction .part ul li {}
+main .left_oction .part ul li input[name^=part] {}
+main .left_oction .part ul li label[for*=part] {}
+/* oction > adult */
+main .left_oction .adult {}
+main .left_oction .adult .tit {}
+main .left_oction .adult .tit span {}
+main .left_oction .adult .tit img {}
+main .left_oction .adult ul {}
+main .left_oction .adult ul li {}
+main .left_oction .adult ul li input[id*=adult] {}
+main .left_oction .adult ul li label[for*=adult] {}
+/* oction > kids */
+main .left_oction .kids {}
+main .left_oction .kids .tit {}
+main .left_oction .kids .tit span {}
+main .left_oction .kids .tit img {}
+main .left_oction .kids ul {}
+main .left_oction .kids ul li {}
+main .left_oction .kids ul li input[id*=kids] {}
+main .left_oction .kids ul li label[for*=kids] {}
+/* ----------------------------------------------- */
+main .left_oction .adult ul,
+main .left_oction .kids ul {
+    justify-content: flex-start;
+}
+main .left_oction .adult ul li,
+main .left_oction .kids ul li {
+    width: calc((100% / 3) - 5px);
+}
+main .left_oction .adult ul li label[for*=adult],
+main .left_oction .kids ul li label[for*=kids] {
+    background-image: url(../images/icon_sub2_oction_uncheck.png);
+    background-repeat: no-repeat;
+    padding-left: 26px;
+}
+main .left_oction .adult ul li input[id*=adult]:checked + label,
+main .left_oction .kids ul li input[id*=kids]:checked + label {
+    background-image: url(../images/icon_sub2_oction_check.png);
+}
+/* adult, kids 옵션 영역 공통 디자인 */
+
+
+
+
+main .right_main {
+    background-color: pink;
+    width: calc(100% - 340px);
+    padding: 0 60px 0 360px;
+}
+main .right_main .top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-end; align-items: center;
+    background-color: yellow;
+}
+main .right_main .top {}
+main .right_main .top ul {
+    display: flex; flex-flow: row nowrap;
+}
+main .right_main .top ul li {}
+main .right_main .top ul li:last-child {margin-left: 20px;}
+main .right_main .top ul li input[id*=include] {display: none;}
+main .right_main .top ul li label[for*=include] {}
+main .right_main .top #display_order {
+    margin-left: 20px;
+}
