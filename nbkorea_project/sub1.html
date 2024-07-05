@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <!-- 디자인 -->
     <link rel="stylesheet" href="./styles/sub1.css">
-    <!--  반응형 -->
+    <!-- header, footer 공통 css 연결 -->
+    <link rel="stylesheet" href="./styles/common.css">
+    <!-- 반응형 -->
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/sub1_responsive.css">
+    <!-- 자바스크립트 -->
+    <script src="./script/common.js" defer></script>
 </head>
 <body>
+    <?php include("./header.php"); ?><!-- php 연결 (top_btn & header) -->
     <main>
         <div class="bg bg1">
             <div class="container">
@@ -163,20 +169,20 @@
                 <ul class="product_list">
                     <li>
                         <a href="#">
-                            <img src="./images/sub1_bg5_item1.jpg" alt="">
-                            <span>860v2</span>
+                            <p><img src="./images/sub1_bg5_item1.jpg" alt=""></p>
+                            <p>860v2</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./images/sub1_bg5_item2.jpg" alt="">
-                            <span>327</span>
+                            <p><img src="./images/sub1_bg5_item2.jpg" alt=""></p>
+                            <p>327</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./images/sub1_bg5_item3.jpg" alt="">
-                            <span>1906</span>
+                            <p><img src="./images/sub1_bg5_item3.jpg" alt=""></p>
+                            <p>1906</p>
                         </a>
                     </li>
                 </ul>
@@ -267,5 +273,6 @@
             </div>
         </div> 
     </main>
+    <?php include("./footer.php"); ?><!-- php 연결 (footer) -->
 </body>
 </html>

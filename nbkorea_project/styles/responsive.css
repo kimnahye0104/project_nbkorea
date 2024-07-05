@@ -1,5 +1,5 @@
 /* 뉴발란스 코리아 반응형 */
-@media screen and (max-width: 1320px) {/* 태블릿 1200px에서 보이는 디자인 */
+@media screen and (max-width: 1340px) {/* 태블릿 1200px에서 보이는 디자인 */
     header > .top {padding: 0 30px;}
     header .main_head {padding: 0 30px;}
     main .bg {width: calc(100% - 60px); margin: 0 auto;}
@@ -29,7 +29,7 @@
     main .bg8 .product > * p {margin: 0; padding: 0;}
     main .bg8 .container .product a h3::after {display: none;}
 
-    footer .container {padding: 60px 30px;}
+    footer .container {width: 100%; padding: 60px 30px;}
     footer .container .f_btm {flex-flow: column nowrap;}
     footer .container .f_btm .left {margin-bottom: 40px;}
 }
@@ -61,14 +61,21 @@
     header .main_head .left .nav_g {display: block;}
     header .main_head {position: relative;}
 
-
     header .main_head .left .nav_g {display: none;}
     header .main_head .left .m_nav_g {display: flex;}
+    main {padding: 139px 0 0;/* header 높이 95px */ /* overflow-x: hidden; */}
 }
 /* ------------------------------------------------------------ 중간가로값 반응형 */
 @media screen and (max-width: 760px) {
     main .bg .container .title {width: 100%; margin: 0 auto;}
     main .bg {width: 100%;}
+    /* h2, p .title 글자 공통 */
+    main .bg .info .title h2,
+    main .bg .container .title h2 {font-size: 2rem; padding: 10px 0;}
+    main .bg .info .title p,
+    main .bg .container .title p {font-size: 1rem;}
+
+
     main .bg .container .product {}
     main .bg2 .container {/* background-color: pink; */}
     main .bg2 .container .product {
@@ -130,11 +137,22 @@
     main .bg4 .container > p img:last-child {display: block;}
 
     header .main_head .left .m_nav_g > a img {width: calc(100%);}
+
+    .top_btn {
+        width: 55px; height: 55px;
+        right: 16px;
+    }
+    .top_btn p img {width: 24px;}
+    .top_btn p:last-child {color: #fff; font-size: 0.75rem;}
 }
 /* 760px 모바일 ========================================= (위) */
 /* 760px 모바일 ========================================= (위) */
 
 @media screen and (max-width: 520px) {
+    main .bg .info .title h2,
+    main .bg .container .title h2 {font-size: 1.75rem; padding: 10px 0;}
+    main .bg .info .title p,
+    main .bg .container .title p {font-size: 0.875rem;}
     main .bg .container .product {padding: 0;}
     main .bg .container a[class*=all] {
         width: 100%; display: inline-block;
