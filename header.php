@@ -449,10 +449,10 @@
             <div class="right">
                 <a href="#" class="search"><img src="./images/icon_search.png" alt="검색하기"></a>
                 <a href="#" class="my"><img src="./images/icon_my.png" alt="마이페이지"></a>
-                <div class="login_join">
+                <!-- <div class="login_join">
                     <a href="#" class="login">로그인</a>
                     <a href="#" class="join">회원가입</a>
-                </div>
+                </div> -->
                 <a href="#" class="my_cart"><img src="./images/icon_cart.png" alt="나의 장바구니"></a>
             </div>
         </div>

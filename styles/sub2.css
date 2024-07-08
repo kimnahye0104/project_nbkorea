@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
 main {
     width: 100%;
@@ -5,147 +11,270 @@ main {
     justify-content: flex-start;
     padding-top: 95px;
 }
-main .left_oction {
-    /* background-color: lightgreen; */
-    width: 340px;
+main .left_option {
+    width: 340px; height: calc(100% - 95px);
     padding: 40px 0px;
-    background-color: #fff;
     position: fixed; top: 95px; left: 0;
+    background-color: #fff;
 }
-main .left_oction .cont {padding:0 60px; overflow-y: scroll;}
-main .left_oction .title {
+main .left_option > * {padding: 0 60px;}
+main .left_option .title {
     width: 100%;
     display: flex; flex-flow: row nowrap;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 60px;
+    background-color: red;
 }
-main .left_oction .title > * {margin-right: 10px;}
-main .left_oction .title > *:last-child {margin: 0;}
-main .left_oction .title h1, main .left_oction .title h2 {font-size: 1.25rem; font-weight: 700;}
-main .left_oction .title h1 {}
-main .left_oction .title p {}
-main .left_oction .title p img {}
-main .left_oction .title h2 {}
+main .left_option .title > * {margin-right: 10px;}
+main .left_option .title > *:last-child {margin: 0;}
+main .left_option .title h1, main .left_option .title h2 {font-size: 1.25rem; font-weight: 700;}
+main .left_option .title h1 {}
+main .left_option .title p {}
+main .left_option .title p img {}
+main .left_option .title h2 {}
 
-main .left_oction .oction {
+
+main .left_option .cont {
+    /* background-color: lightgray; */
+    height: calc(100% - 71px);
+    overflow-y: scroll;
+}
+main .left_option .option {
     /* oction별 영역 공통 디자인 선택자 */
     padding: 15px 0;
     border-top: 0.5px solid #ddd;
 }
-main .left_oction .oction:last-child {
+main .left_option .option:last-child {
     border: 0.5px solid #ddd;
     border-left: 0; border-right: 0;
 }
-main .left_oction .oction .tit {
+main .left_option .option .tit {
     width: 100%;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
     margin-bottom: 15px;
 }
-main .left_oction .oction ul {
+main .left_option .option ul {
     /*옵션 (분류,일반, 키즈 등.. tit 아래 세부 옵션 영역*/
     width: 100%;
     display: flex; flex-flow: row wrap;
     justify-content: space-between;
 }
 
-main .left_oction .oction ul li input[id^=oction] {display: none;}
-main .left_oction .oction ul li label[for^=oction] {
+main .left_option .option ul li input[id^=option] {display: none;}
+main .left_option .option ul li label[for^=option] {
     font-size: 0.875rem; letter-spacing: -0.4px;
 }
 
 /* 분류, 사이즈, 가격 공통 디자인 선택자 (아래) */
-main .left_oction .oction ul li {
+main .left_option .option ul li {
     width: calc((100% / 2) - 5px);
     margin-bottom: 10px;
 }
-main .left_oction .size ul li {width: calc((100% / 3) - 5px);}
-main .left_oction .oction ul li label[for*=part],
-main .left_oction .oction ul li label[for*=size],
-main .left_oction .oction ul li label[for*=price] {
+main .left_option .size ul li {width: calc((100% / 3) - 5px);}
+main .left_option .option ul li label[for*=part],
+main .left_option .option ul li label[for*=size],
+main .left_option .option ul li label[for*=price],
+main .left_option .option ul li label[for*=sale] {
     background-color: #fff;
     border: 0.5px solid #ddd; border-radius: 3px;
     padding: 8px 0px; text-align: center;
     width: 100%; display: inline-block;
 }
-main .left_oction .oction ul li input[id*=part]:checked + label,
-main .left_oction .oction ul li input[id*=size]:checked + label,
-main .left_oction .oction ul li input[id*=price]:checked + label {
+main .left_option .option ul li input[id*=part]:checked + label,
+main .left_option .option ul li input[id*=size]:checked + label,
+main .left_option .option ul li input[id*=price]:checked + label,
+main .left_option .option ul li input[id*=sale]:checked + label  {
     background-color: #333; color: #fff;
 }
 /* 분류, 사이즈, 가격 공통 디자인 선택자 (위) */
 /* --------------------------- 옵션 input 등 공통 선택자 (위) */
 /* --------------------------- 옵션 input 등 공통 선택자 (위) */
-main .left_oction .part {
+main .left_option .part {
     /* background-color: yellow; */
 }
-main .left_oction .part .tit {/* 공통 선택자 작성 */}
-main .left_oction .part .tit span {}
-main .left_oction .part .tit img {}
-main .left_oction .part ul {/* 공통 선택자 작성 */}
-main .left_oction .part ul li {}
-main .left_oction .part ul li input[name^=part] {}
-main .left_oction .part ul li label[for*=part] {}
+main .left_option .part .tit {/* 공통 선택자 작성 */}
+main .left_option .part .tit span {}
+main .left_option .part .tit img {}
+main .left_option .part ul {/* 공통 선택자 작성 */}
+main .left_option .part ul li {}
+main .left_option .part ul li input[name^=part] {}
+main .left_option .part ul li label[for*=part] {}
 /* oction > adult */
-main .left_oction .adult {}
-main .left_oction .adult .tit {}
-main .left_oction .adult .tit span {}
-main .left_oction .adult .tit img {}
-main .left_oction .adult ul {}
-main .left_oction .adult ul li {}
-main .left_oction .adult ul li input[id*=adult] {}
-main .left_oction .adult ul li label[for*=adult] {}
+main .left_option .adult {}
+main .left_option .adult .tit {}
+main .left_option .adult .tit span {}
+main .left_option .adult .tit img {}
+main .left_option .adult ul {}
+main .left_option .adult ul li {}
+main .left_option .adult ul li input[id*=adult] {}
+main .left_option .adult ul li label[for*=adult] {}
 /* oction > kids */
-main .left_oction .kids {}
-main .left_oction .kids .tit {}
-main .left_oction .kids .tit span {}
-main .left_oction .kids .tit img {}
-main .left_oction .kids ul {}
-main .left_oction .kids ul li {}
-main .left_oction .kids ul li input[id*=kids] {}
-main .left_oction .kids ul li label[for*=kids] {}
+main .left_option .kids {}
+main .left_option .kids .tit {}
+main .left_option .kids .tit span {}
+main .left_option .kids .tit img {}
+main .left_option .kids ul {}
+main .left_option .kids ul li {}
+main .left_option .kids ul li input[id*=kids] {}
+main .left_option .kids ul li label[for*=kids] {}
 /* ----------------------------------------------- */
-main .left_oction .adult ul,
-main .left_oction .kids ul {
+main .left_option .adult ul,
+main .left_option .kids ul {
     justify-content: flex-start;
 }
-main .left_oction .adult ul li,
-main .left_oction .kids ul li {
+main .left_option .adult ul li,
+main .left_option .kids ul li {
     width: calc((100% / 3) - 5px);
 }
-main .left_oction .adult ul li label[for*=adult],
-main .left_oction .kids ul li label[for*=kids] {
+main .left_option .adult ul li label[for*=adult],
+main .left_option .kids ul li label[for*=kids] {
     background-image: url(../images/icon_sub2_oction_uncheck.png);
     background-repeat: no-repeat;
     padding-left: 26px;
 }
-main .left_oction .adult ul li input[id*=adult]:checked + label,
-main .left_oction .kids ul li input[id*=kids]:checked + label {
+main .left_option .adult ul li input[id*=adult]:checked + label,
+main .left_option .kids ul li input[id*=kids]:checked + label {
     background-image: url(../images/icon_sub2_oction_check.png);
 }
 /* adult, kids 옵션 영역 공통 디자인 */
 
-
+main .left_option .price {}
+main .left_option .price .tit {}
+main .left_option .price ul {}
+main .left_option .price ul li {}
+main .left_option .price ul li input[id*=price] {}
+main .left_option .price ul li label[for*=price] {}
 
 
 main .right_main {
     background-color: pink;
     width: calc(100% - 340px);
-    padding: 0 60px 0 360px;
+    padding: 0 60px 0 20px;
+    position: absolute;
+    top: 95px; right: 0;
 }
 main .right_main .top {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-end; align-items: center;
     background-color: yellow;
+    margin: 40px 0;
 }
 main .right_main .top {}
 main .right_main .top ul {
     display: flex; flex-flow: row nowrap;
 }
-main .right_main .top ul li {}
-main .right_main .top ul li:last-child {margin-left: 20px;}
+main .right_main .top ul li {
+    margin-right: 20px;
+}
+main .right_main .top ul li:last-child {}
 main .right_main .top ul li input[id*=include] {display: none;}
 main .right_main .top ul li label[for*=include] {}
+main .right_main .top ul li label[for*=sale] {position: relative;}
+main .right_main .top ul li label[for*=sale]:last-child::after {
+    content: ''; display: inline-block;
+    width: 1px; height: 16px;
+    background-color: #000;
+    position: absolute;
+    top: 5px; right: -20px;
+}
 main .right_main .top #display_order {
     margin-left: 20px;
+    appearance: none; outline: 0;
+    display: inline-block;
+    line-height: 36px; border: 0;
+    background-color: #fff;
+    padding: 0px 40px 3px 5px;
+}
+main .right_main .top .select_arrow {
+    background: url(../images/icon_sub2_select_arrow.png) no-repeat 110px 5px;
+}
+main .right_main .top #display_order > * {
+    appearance: none; outline: 0;
+    border: 0;
+    padding: 5px 5px;
+    display: inline-block;
+}
+
+main .right_main .bg {}
+main .right_main .bg .container {}
+main .right_main .bg .container .product_list {
+    background-color: yellow;
+    margin-bottom: 80px;
+    display: flex; flex-flow: row nowrap;
+}
+main .right_main .bg .container .product_list:last-child {margin: 0;}
+main .right_main .bg .container .product_list li {margin-right: 20px;}
+main .right_main .bg .container .product_list li:last-child {margin-right: 0px;}
+
+main .right_main .bg .container .product_list li > a > p {margin-bottom: 20px;}
+main .right_main .bg .container .product_list li > a > p img {width: 100%;}
+
+main .right_main .bg .container .product_list li > a > .info {}
+main .right_main .bg .container .product_list li > a > .info h3 {}
+main .right_main .bg .container .product_list li > a > .info .price {
+    margin: 10px 0;
+}
+main .right_main .bg .container .product_list li > a > .info .price > * {
+    font-family: 'Pretendard-Regular';
+    font-size: 1.125rem;
+    margin-right: 5px;
+}
+main .right_main .bg .container .product_list li > a > .info .price del {font-size: 1rem; color: #666;}
+main .right_main .bg .container .product_list li > a > .info .price span {
+    font-weight: 700;
+}
+main .right_main .bg .container .product_list li > a > .info .price em {
+    font-weight: 700;
+    margin-right: 0px;
+}
+main .right_main .bg .container .product_list li > a > .info .review_like {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+}
+main .right_main .bg .container .product_list li > a > .info .review_like > p {
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    margin-right: 10px;
+}
+main .right_main .bg .container .product_list li > a > .info .review_like > p:last-child {margin-right: 0;}
+main .right_main .bg .container .product_list li > a > .info .review_like .review {}
+main .right_main .bg .container .product_list li > a > .info .review_like .review img {}
+main .right_main .bg .container .product_list li > a > .info .review_like .review span {}
+
+main .right_main .bg .container .product_list li > a > .info .review_like .like {}
+main .right_main .bg .container .product_list li > a > .info .review_like .like img {}
+main .right_main .bg .container .product_list li > a > .info .review_like .like span {}
+
+main .right_main .benner {
+    width: 100%; height: 414px;
+    margin: 80px auto;
+    display: inline-block;
+    position: relative;
+    background-image: url(../images/sub2_benner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main .right_main .benner .info {
+    position: absolute;
+    top: 30%; left: 0;
+    width: 100%;
+    text-align: center;
+}
+main .right_main .benner .info em,
+main .right_main .benner .info span {
+    color: #fff;
+    display: block;
+}
+main .right_main .benner .info em {
+    font-size: 3.375rem; letter-spacing: -1.2px;
+    font-style: italic; font-weight: 500;
+    line-height: 1.2;
+}
+main .right_main .benner .info span {
+    margin-top: 35px;
+    background-color: #000;
+    display: inline-block;
+    padding: 12px 40px;
 }
