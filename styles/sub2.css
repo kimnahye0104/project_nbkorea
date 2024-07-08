@@ -5,16 +5,16 @@
     font-style: normal;
 }
 html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
+/* 스크롤바 디자인 */
+main .left_option .cont::-webkit-scrollbar {background-color: #fff; width: 1px;}
 main {
     width: 100%;
-    display: flex; flex-flow: row nowrap;
-    justify-content: flex-start;
     padding-top: 95px;
 }
 main .left_option {
     width: 340px; height: calc(100% - 95px);
-    padding: 40px 0px;
-    position: fixed; top: 95px; left: 0;
+    padding: 20px 0px;
+    position: fixed; top:95px; left: 0;
     background-color: #fff;
 }
 main .left_option > * {padding: 0 60px;}
@@ -23,7 +23,6 @@ main .left_option .title {
     display: flex; flex-flow: row nowrap;
     align-items: center;
     padding: 20px 60px;
-    background-color: red;
 }
 main .left_option .title > * {margin-right: 10px;}
 main .left_option .title > *:last-child {margin: 0;}
@@ -48,11 +47,17 @@ main .left_option .option:last-child {
     border: 0.5px solid #ddd;
     border-left: 0; border-right: 0;
 }
+main .left_option #option_frm fieldset .option {
+    /* .option:last-child 마지막 옵션 영역 = 할인율 border-bottom 중복현상 해결 */
+    border: 0;
+}
+
 main .left_option .option .tit {
     width: 100%;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between; align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 main .left_option .option ul {
     /*옵션 (분류,일반, 키즈 등.. tit 아래 세부 옵션 영역*/
@@ -147,17 +152,48 @@ main .left_option .price ul li input[id*=price] {}
 main .left_option .price ul li label[for*=price] {}
 
 
+main .m_option_bar {display: none; width: 100%; padding: 0 20px;}
+main .m_option_bar .cont {
+    width: 1500px;
+    overflow-x: scroll;
+    padding: 10px 0;
+}
+main .m_option_bar .cont::-webkit-scrollbar {background-color: #fff; height: 1px;}
+main .m_option_bar .cont a {
+    /* background-color: green; */
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-right: 5px;
+    font-size: 0.875rem;
+}
+main .m_option_bar .cont a:first-child,
+main .m_option_bar .cont a:nth-child(2) {
+    border: 0; font-weight: 800;
+    padding: 0;
+}
+main .m_option_bar .cont a:first-child::after,
+main .m_option_bar .cont a:nth-child(2)::after {
+    content: ''; display: inline-block;
+    background-image: url(../images/sub2_m_option_bar_arrow.png);
+    background-size: cover; background-repeat: no-repeat;
+    width: 16px; height: 16px;
+    margin-left: 10px;
+} 
+
+main .m_option_bar .cont a:last-child {margin-right: 0;}
+
 main .right_main {
-    background-color: pink;
+    /* background-color: pink; */
+    float: right;
     width: calc(100% - 340px);
     padding: 0 60px 0 20px;
-    position: absolute;
-    top: 95px; right: 0;
 }
 main .right_main .top {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-end; align-items: center;
-    background-color: yellow;
+    /* background-color: yellow; */
     margin: 40px 0;
 }
 main .right_main .top {}
@@ -169,12 +205,19 @@ main .right_main .top ul li {
 }
 main .right_main .top ul li:last-child {}
 main .right_main .top ul li input[id*=include] {display: none;}
-main .right_main .top ul li label[for*=include] {}
+main .right_main .top ul li label[for*=include] {
+    background-image: url(../images/icon_sub2_oction_check.png);
+    background-repeat: no-repeat;
+    padding-left: 26px;
+}
+main .right_main .top ul li input[id*=include]:checked + label[for*=include] {
+    background-image: url(../images/icon_sub2_oction_uncheck.png);
+}
 main .right_main .top ul li label[for*=sale] {position: relative;}
 main .right_main .top ul li label[for*=sale]:last-child::after {
     content: ''; display: inline-block;
     width: 1px; height: 16px;
-    background-color: #000;
+    background-color: #ddd;
     position: absolute;
     top: 5px; right: -20px;
 }
@@ -199,7 +242,7 @@ main .right_main .top #display_order > * {
 main .right_main .bg {}
 main .right_main .bg .container {}
 main .right_main .bg .container .product_list {
-    background-color: yellow;
+    /* background-color: yellow; */
     margin-bottom: 80px;
     display: flex; flex-flow: row nowrap;
 }
@@ -251,11 +294,9 @@ main .right_main .benner {
     margin: 80px auto;
     display: inline-block;
     position: relative;
-    background-image: url(../images/sub2_benner.jpg);
-    background-size: cover;
-    background-position: center;
 }
-
+main .right_main .benner > p {}
+main .right_main .benner > p img {width: 100%;}
 main .right_main .benner .info {
     position: absolute;
     top: 30%; left: 0;
@@ -278,3 +319,4 @@ main .right_main .benner .info span {
     display: inline-block;
     padding: 12px 40px;
 }
+footer {width: calc(100% - 340px); float: right;}

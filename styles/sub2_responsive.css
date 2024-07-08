@@ -1,0 +1,13 @@
+@media screen and (max-width: 1340px) {
+    main .bg:nth-child(even) {padding: 0;}
+    main .right_main {padding: 0 20px 0 20px;}
+
+}
+@media screen and (max-width: 1000px) {
+    main .left_option {display: none;}
+    main .m_option_bar {display: block;}
+    main .right_main {
+        width: 100%;
+    }
+    footer {width: 100%; float: none;}
+}

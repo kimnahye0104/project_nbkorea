@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./styles/sub2.css">
     <!-- header, footer 공통 css 연결 -->
     <link rel="stylesheet" href="./styles/common.css">
+    <!-- 반응형 -->
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/sub2_responsive.css">
     <!-- 자바스크립트 -->
     <script src="./script/common.js" defer></script>
 </head>
@@ -27,62 +30,67 @@
                 <h2>의류</h2>
             </div>
             <div class="cont">
-                <div class="option part">
-                    <div class="tit">
-                        <span>분류</span>
-                        <img src="./images/icon_option_off.png" alt="">
-                    </div>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_all">
-                            <label for="option_part_all">전체보기</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_tshart">
-                            <label for="option_part_tshart">티셔츠</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_pantsall">
-                            <label for="option_part_pantsall">팬츠 전체</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_pantsshort">
-                            <label for="option_part_pantsshort">숏팬츠</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_pantslong">
-                            <label for="option_part_pantslong">롱팬츠</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_sleeveless">
-                            <label for="option_part_sleeveless">슬리브리스</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_bratop">
-                            <label for="option_part_bratop">브라탑</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_poloshirt">
-                            <label for="option_part_poloshirt">폴로셔츠</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_skirt">
-                            <label for="option_part_skirt">스커트/원피스</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_rashguard">
-                            <label for="option_part_rashguard">래쉬가드</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_jacket">
-                            <label for="option_part_jacket">바람막이/자켓</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="part_option" id="option_part_hood">
-                            <label for="option_part_hood">후드티/맨투맨</label>
-                        </li>
-                    </ul>
-                </div>
+                <form action="#" method="get" id="option_frm">
+                    <fieldset>
+                        <legend class="skip">카테고리 선택 양식</legend>
+                        <div class="option part">
+                            <div class="tit">
+                                <span>분류</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_all">
+                                    <label for="option_part_all">전체보기</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_tshart">
+                                    <label for="option_part_tshart">티셔츠</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_pantsall">
+                                    <label for="option_part_pantsall">팬츠 전체</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_pantsshort">
+                                    <label for="option_part_pantsshort">숏팬츠</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_pantslong">
+                                    <label for="option_part_pantslong">롱팬츠</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_sleeveless">
+                                    <label for="option_part_sleeveless">슬리브리스</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_bratop">
+                                    <label for="option_part_bratop">브라탑</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_poloshirt">
+                                    <label for="option_part_poloshirt">폴로셔츠</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_skirt">
+                                    <label for="option_part_skirt">스커트/원피스</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_rashguard">
+                                    <label for="option_part_rashguard">래쉬가드</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_jacket">
+                                    <label for="option_part_jacket">바람막이/자켓</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="part_option" id="option_part_hood">
+                                    <label for="option_part_hood">후드티/맨투맨</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                </form>
                 <div class="option adult">
                     <div class="tit">
                         <span>일반</span>
@@ -237,7 +245,23 @@
                 </div>
             </div>
         </div>
-        <div class="right_main">
+        <div class="m_option_bar"><!-- .left_option 반응형 시, main 위로 나타나는 -->
+            <div class="cont">
+                <a href="#">ALL</a>
+                <a href="#">의류</a>
+                <a href="#">전체보기</a>
+                <a href="#">티셔츠</a>
+                <a href="#">팬츠</a>
+                <a href="#">슬리브리스</a>
+                <a href="#">브라탑</a>
+                <a href="#">폴로셔츠</a>
+                <a href="#">스커트/원피스</a>
+                <a href="#">래쉬가드</a>
+                <a href="#">바람막이/자켓</a>
+                <a href="#">후드티/맨투맨</a>
+            </div>
+        </div>
+        <div class="right_main"><!-- 상품보이는 메인 영역 -->
             <div class="top">
                 <ul>
                     <li>
@@ -449,6 +473,7 @@
                 </div>
             </div>
             <a href="#" class="benner">
+                <p><img src="./images/sub2_benner.jpg" alt=""></p>
                 <div class="info">
                     <em>New Headgear<br>Summer Package</em>
                     <span>자세히 보기</span>

@@ -19,19 +19,36 @@ header > .top {
     align-items: center;
 }
 header > .top .left {}
-header .top .left img:first-child {margin-right: 30px;}
-header .top .left img:last-child {}
+header > .top .left a {}
+header > .top .left a img:first-child {margin-right: 30px;}
+header > .top .left a img:last-child {}
+
+
+header > .top .right {}
+header > .top .right a {
+    display: inline-block;
+    font-size: 0.875rem; color: #808080;
+    position: relative;
+    padding: 0 10px;
+}
+header > .top .right a::after {
+    content: '';
+    display: inline-block;
+    width: 1px; height: 14px;
+    background-color: #ccc;
+    position: absolute;
+    top: 3px; left: 0;
+} 
+header > .top .right a:first-child {padding-left: 0;}
+header > .top .right a:first-child::after {display: none;}
+header > .top .right a:last-child {padding-right: 0;} 
+
+/* 메인 헤더 ============================================ */
 header .main_head {
     height: 60px; padding: 0 60px; background-color: #fff;
     display: flex; flex-flow: row nowrap;
     align-items: center; justify-content: space-between;
     border-bottom: 1px solid #eee;
-}
-header > .top .right {}
-header > .top .right span {
-    font-size: 0.875rem; color: #808080;
-    border-right: 1px solid #dbdbdb;
-    padding-right: 20px;
 }
 header .main_head .left {
     display: flex; flex-flow: row nowrap;
@@ -275,7 +292,7 @@ header .main_head .right .login_join a:first-child::after {
 }
 header .main_head .right .my_cart {margin: 0;}
 /* header -------------------- */
-footer {width: 100%; background-color: #232323; color: #fff;}
+footer {background-color: #232323; color: #fff;}
 footer .container {
     width: 100%; margin: 0 auto;
     padding: 60px 0 30px 43px;

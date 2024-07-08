@@ -5,14 +5,14 @@
     <header>
         <div class="top">
             <div class="left">
-                <img src="./images/langmode.png" alt="다국어 설정">
-                <img src="./images/mynb.png" alt="마이엔비">
+                <a href="#"><img src="./images/langmode.png" alt="다국어 설정"></a>
+                <a href="#"><img src="./images/mynb.png" alt="마이엔비"></a>
             </div>
             <div class="right">
-                <span>매장찾기</span>
-                <span>공지사항</span>
-                <span>FAQS</span>
-                <span>이벤트</span>
+                <a href="#">매장찾기</a>
+                <a href="#">공지사항</a>
+                <a href="#">FAQS</a>
+                <a href="#">이벤트</a>
             </div>
         </div>
         <div class="main_head">

@@ -144,6 +144,7 @@
     }
     .top_btn p img {width: 24px;}
     .top_btn p:last-child {color: #fff; font-size: 0.75rem;}
+    header > .top .right {display: none;}
 }
 /* 760px 모바일 ========================================= (위) */
 /* 760px 모바일 ========================================= (위) */
