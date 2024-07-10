@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <!-- 초기화 -->
     <link rel="stylesheet" href="./styles/reset.css">
-    <!-- 디자인 -->
-    <link rel="stylesheet" href="./styles/sub2.css">
     <!-- header, footer 공통 css 연결 -->
     <link rel="stylesheet" href="./styles/common.css">
+    <!-- 디자인 -->
+    <link rel="stylesheet" href="./styles/sub2.css">
     <!-- 반응형 -->
     <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="./styles/sub2_responsive.css">
@@ -29,10 +29,10 @@
                 <p><img src="./images/icon_sub2_title_right_arrow.png" alt=""></p>
                 <h2>의류</h2>
             </div>
-            <div class="cont">
-                <form action="#" method="get" id="option_frm">
-                    <fieldset>
-                        <legend class="skip">카테고리 선택 양식</legend>
+            <form action="#" method="get" id="option_frm">
+                <fieldset>
+                    <legend class="skip">카테고리 선택 양식</legend>
+                    <div class="cont">
                         <div class="option part">
                             <div class="tit">
                                 <span>분류</span>
@@ -89,161 +89,217 @@
                                 </li>
                             </ul>
                         </div>
-                    </fieldset>
-                </form>
-                <div class="option adult">
-                    <div class="tit">
-                        <span>일반</span>
-                        <img src="./images/icon_option_off.png" alt="">
+                        <div class="option adult">
+                            <div class="tit">
+                                <span>일반</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="adult_option" id="option_adult_all">
+                                    <label for="option_adult_all">공용</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="adult_option" id="option_adult_men">
+                                    <label for="option_adult_men">남자</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="adult_option" id="option_adult_women">
+                                    <label for="option_adult_women">여자</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option kids">
+                            <div class="tit">
+                                <span>키즈</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="kids_option" id="option_kids_all">
+                                    <label for="option_kids_all">공용</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="kids_option" id="option_kids_men">
+                                    <label for="option_kids_men">남아</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="adult_option" id="option_kids_women">
+                                    <label for="option_kids_women">여아</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option size">
+                            <div class="tit">
+                                <span>사이즈</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_75s">
+                                    <label for="option_size_75s">75 (S)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_80m">
+                                    <label for="option_size_80m">80 (M)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_85l">
+                                    <label for="option_size_85l">85 (L)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_85s">
+                                    <label for="option_size_85s">85 (S)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_90m">
+                                    <label for="option_size_90m">90 (M)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_90s">
+                                    <label for="option_size_90s">90 (S)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_90xl">
+                                    <label for="option_size_90xl">90 (XL)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_95l">
+                                    <label for="option_size_95l">95 (L)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_95m">
+                                    <label for="option_size_95m">95 (M)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_100l">
+                                    <label for="option_size_100l">100 (L)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_105xl">
+                                    <label for="option_size_105xl">105 (XL)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size_option" id="option_size_110xxl">
+                                    <label for="option_size_110xxl">110 (XXL)</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option price">
+                            <div class="tit">
+                                <span>가격</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="price_option" id="option_price_all">
+                                    <label for="option_price_all">전체보기</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="price_option" id="option_price_5">
+                                    <label for="option_price_5">5만원 이하</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="price_option" id="option_price_10">
+                                    <label for="option_price_10">10만원 이하</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="price_option" id="option_price_15">
+                                    <label for="option_price_15">15만원 이하</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="price_option" id="option_price_20">
+                                    <label for="option_price_20">20만원 이하</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="price_option" id="option_price_30">
+                                    <label for="option_price_30">30만원 이하</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option color">
+                            <div class="tit">
+                                <span>색상</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_white">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_black">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_gray">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_navy">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_blue">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_mint">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_red">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_orange">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_pink">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_yellow">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_purple">
+                                    <label></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color_option" id="option_color_green">
+                                    <label></label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option sale">
+                            <div class="tit">
+                                <span>할인율</span>
+                                <img src="./images/icon_option_off.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="sale_option" id="option_sale_40">
+                                    <label for="option_sale_40">40% 이상</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="sale_option" id="option_sale_30">
+                                    <label for="option_sale_30">30% 이상</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="sale_option" id="option_sale_20">
+                                    <label for="option_sale_20">20% 이상</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="sale_option" id="option_sale_10">
+                                    <label for="option_sale_10">10% 이상</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="adult_option" id="option_adult_all">
-                            <label for="option_adult_all">공용</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="adult_option" id="option_adult_men">
-                            <label for="option_adult_men">남자</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="adult_option" id="option_adult_women">
-                            <label for="option_adult_women">여자</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="option kids">
-                    <div class="tit">
-                        <span>키즈</span>
-                        <img src="./images/icon_option_off.png" alt="">
-                    </div>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="kids_option" id="option_kids_all">
-                            <label for="option_kids_all">공용</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="kids_option" id="option_kids_men">
-                            <label for="option_kids_men">남아</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="adult_option" id="option_kids_women">
-                            <label for="option_kids_women">여아</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="option size">
-                    <div class="tit">
-                        <span>사이즈</span>
-                        <img src="./images/icon_option_off.png" alt="">
-                    </div>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_75s">
-                            <label for="option_size_75s">75 (S)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_80m">
-                            <label for="option_size_80m">80 (M)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_85l">
-                            <label for="option_size_85l">85 (L)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_85s">
-                            <label for="option_size_85s">85 (S)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_90m">
-                            <label for="option_size_90m">90 (M)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_90s">
-                            <label for="option_size_90s">90 (S)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_90xl">
-                            <label for="option_size_90xl">90 (XL)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_95l">
-                            <label for="option_size_95l">95 (L)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_95m">
-                            <label for="option_size_95m">95 (M)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_100l">
-                            <label for="option_size_100l">100 (L)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_105xl">
-                            <label for="option_size_105xl">105 (XL)</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="size_option" id="option_size_110xxl">
-                            <label for="option_size_110xxl">110 (XXL)</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="option price">
-                    <div class="tit">
-                        <span>가격</span>
-                        <img src="./images/icon_option_off.png" alt="">
-                    </div>
-                    <ul>
-                        <li>
-                            <input type="radio" name="price_option" id="option_price_all">
-                            <label for="option_price_all">전체보기</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="price_option" id="option_price_5">
-                            <label for="option_price_5">5만원 이하</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="price_option" id="option_price_10">
-                            <label for="option_price_10">10만원 이하</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="price_option" id="option_price_15">
-                            <label for="option_price_15">15만원 이하</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="price_option" id="option_price_20">
-                            <label for="option_price_20">20만원 이하</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="price_option" id="option_price_30">
-                            <label for="option_price_30">30만원 이하</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="option sale">
-                    <div class="tit">
-                        <span>할인율</span>
-                        <img src="./images/icon_option_off.png" alt="">
-                    </div>
-                    <ul>
-                        <li>
-                            <input type="radio" name="sale_option" id="option_sale_40">
-                            <label for="option_sale_40">40% 이상</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="sale_option" id="option_sale_30">
-                            <label for="option_sale_30">30% 이상</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="sale_option" id="option_sale_20">
-                            <label for="option_sale_20">20% 이상</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="sale_option" id="option_sale_10">
-                            <label for="option_sale_10">10% 이상</label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                </fieldset>
+            </form>
         </div>
         <div class="m_option_bar"><!-- .left_option 반응형 시, main 위로 나타나는 -->
             <div class="cont">
@@ -280,7 +336,7 @@
                     <option value="price_high">높은가격순</option>
                 </select>
             </div>
-            <div class="bg bg1">
+            <div class="bg">
                 <div class="container">
                     <ul class="product_list">
                         <li>
@@ -473,12 +529,207 @@
                 </div>
             </div>
             <a href="#" class="benner">
-                <p><img src="./images/sub2_benner.jpg" alt=""></p>
+                <p>
+                    <img src="./images/sub2_benner.jpg" alt="">
+                    <img src="./images/sub2_m_benner.jpg" alt="">
+                </p>
                 <div class="info">
                     <em>New Headgear<br>Summer Package</em>
                     <span>자세히 보기</span>
                 </div>
             </a>
+            <div class="bg">
+                <div class="container">
+                    <ul class="product_list">
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product1.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 01 -->
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product2.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 02 -->
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product3.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 03 -->
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product4.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 04 -->
+                    </ul>
+                    <ul class="product_list">
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product5.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 01 -->
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product6.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 02 -->
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product7.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 03 -->
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/sub2_product8.jpg" alt=""></p>
+                                <div class="info">
+                                    <h3>NB코리아 반팔티</h3>
+                                    <p class="price">
+                                        <del>49,900</del>
+                                        <span>10%</span>
+                                        <em>44,910원</em>
+                                    </p>
+                                    <div class="review_like">
+                                        <p class="review">
+                                            <img src="./images/icon_sub2_review.png" alt="">
+                                            <span>+999</span>
+                                        </p>
+                                        <p class="like">
+                                            <img src="./images/icon_sub2_favorite.png" alt="">
+                                            <span>13</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li><!-- product 04 -->
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
     <?php include("./footer.php"); ?><!-- php 연결 (footer) -->

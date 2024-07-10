@@ -6,10 +6,11 @@
 }
 html, body {font-family: "Noto Sans KR", sans-serif; scroll-behavior: smooth;}
 /* 스크롤바 디자인 */
-main .left_option .cont::-webkit-scrollbar {background-color: #fff; width: 1px;}
+main .left_option #option_frm::-webkit-scrollbar {background-color: #fff; width: 1px;}
 main {
     width: 100%;
     padding-top: 95px;
+    overflow: hidden;
 }
 main .left_option {
     width: 340px; height: calc(100% - 95px);
@@ -32,12 +33,13 @@ main .left_option .title p {}
 main .left_option .title p img {}
 main .left_option .title h2 {}
 
-
-main .left_option .cont {
-    /* background-color: lightgray; */
+main .left_option #option_frm {
+    /* background-color: red; */
     height: calc(100% - 71px);
     overflow-y: scroll;
 }
+main .left_option #option_frm fieldset {}
+main .left_option #option_frm fieldset .cont {}
 main .left_option .option {
     /* oction별 영역 공통 디자인 선택자 */
     padding: 15px 0;
@@ -47,11 +49,6 @@ main .left_option .option:last-child {
     border: 0.5px solid #ddd;
     border-left: 0; border-right: 0;
 }
-main .left_option #option_frm fieldset .option {
-    /* .option:last-child 마지막 옵션 영역 = 할인율 border-bottom 중복현상 해결 */
-    border: 0;
-}
-
 main .left_option .option .tit {
     width: 100%;
     display: flex; flex-flow: row nowrap;
@@ -65,18 +62,43 @@ main .left_option .option ul {
     display: flex; flex-flow: row wrap;
     justify-content: space-between;
 }
+main .left_option .option ul li {}
 
 main .left_option .option ul li input[id^=option] {display: none;}
+
 main .left_option .option ul li label[for^=option] {
     font-size: 0.875rem; letter-spacing: -0.4px;
 }
-
 /* 분류, 사이즈, 가격 공통 디자인 선택자 (아래) */
 main .left_option .option ul li {
     width: calc((100% / 2) - 5px);
     margin-bottom: 10px;
-}
+} 
 main .left_option .size ul li {width: calc((100% / 3) - 5px);}
+main .left_option .color ul li {
+    width: calc(100% / 6);
+}
+main .left_option .color ul li label {
+    background-color: red;
+    display: inline-block;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+main .left_option .color ul li input[id*=white] + label {background-color: white; border-color: #ddd;}
+main .left_option .color ul li input[id*=black] + label {background-color: #333;}
+main .left_option .color ul li input[id*=gray] + label {background-color: #8b8b8b;}
+main .left_option .color ul li input[id*=navy] + label {background-color: #000E55;}
+main .left_option .color ul li input[id*=blue] + label {background-color: #0E36C0;}
+main .left_option .color ul li input[id*=mint] + label {background-color: #00BDD7;}
+main .left_option .color ul li input[id*=red] + label {background-color: #f00;}
+main .left_option .color ul li input[id*=orange] + label {background-color: #FC6A00;}
+main .left_option .color ul li input[id*=pink] + label {background-color: #E5006E;}
+main .left_option .color ul li input[id*=yellow] + label {background-color: #ff0;}
+main .left_option .color ul li input[id*=purple] + label {background-color: #3F008E;}
+main .left_option .color ul li input[id*=green] + label {background-color: #00750C;}
+
+
 main .left_option .option ul li label[for*=part],
 main .left_option .option ul li label[for*=size],
 main .left_option .option ul li label[for*=price],
@@ -91,6 +113,9 @@ main .left_option .option ul li input[id*=size]:checked + label,
 main .left_option .option ul li input[id*=price]:checked + label,
 main .left_option .option ul li input[id*=sale]:checked + label  {
     background-color: #333; color: #fff;
+}
+main .left_option .option ul li input[id*=color]:checked + label {
+    border: 1px solid #000;
 }
 /* 분류, 사이즈, 가격 공통 디자인 선택자 (위) */
 /* --------------------------- 옵션 input 등 공통 선택자 (위) */
@@ -188,17 +213,18 @@ main .right_main {
     /* background-color: pink; */
     float: right;
     width: calc(100% - 340px);
-    padding: 0 60px 0 20px;
+    padding: 0 60px 80px 20px;
 }
 main .right_main .top {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-end; align-items: center;
     /* background-color: yellow; */
-    margin: 40px 0;
+    margin: 40px 0 0;
 }
 main .right_main .top {}
 main .right_main .top ul {
     display: flex; flex-flow: row nowrap;
+    justify-content: flex-end;
 }
 main .right_main .top ul li {
     margin-right: 20px;
@@ -243,10 +269,9 @@ main .right_main .bg {}
 main .right_main .bg .container {}
 main .right_main .bg .container .product_list {
     /* background-color: yellow; */
-    margin-bottom: 80px;
+    margin: 40px 0;
     display: flex; flex-flow: row nowrap;
 }
-main .right_main .bg .container .product_list:last-child {margin: 0;}
 main .right_main .bg .container .product_list li {margin-right: 20px;}
 main .right_main .bg .container .product_list li:last-child {margin-right: 0px;}
 
@@ -289,25 +314,33 @@ main .right_main .bg .container .product_list li > a > .info .review_like .like 
 main .right_main .bg .container .product_list li > a > .info .review_like .like img {}
 main .right_main .bg .container .product_list li > a > .info .review_like .like span {}
 
+main .right_main .bg .container .product_list li > a > .info .review_like > p > *:nth-child(2) {
+    /* 리뷰, 좋아요 글자 크기 : 선택자 */
+    font-size: 0.725rem;
+    color: rgba(0, 0, 0, 0.65);
+}
+
 main .right_main .benner {
-    width: 100%; height: 414px;
-    margin: 80px auto;
+    margin: 0 auto;
     display: inline-block;
     position: relative;
 }
 main .right_main .benner > p {}
-main .right_main .benner > p img {width: 100%;}
+main .right_main .benner > p img {}
+main .right_main .benner > p img:first-child {width: 100%; display: block;}
+main .right_main .benner > p img:last-child {display: none;}
+
 main .right_main .benner .info {
     position: absolute;
-    top: 30%; left: 0;
-    width: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     text-align: center;
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 main .right_main .benner .info em,
-main .right_main .benner .info span {
-    color: #fff;
-    display: block;
-}
+main .right_main .benner .info span {color: #fff;}
 main .right_main .benner .info em {
     font-size: 3.375rem; letter-spacing: -1.2px;
     font-style: italic; font-weight: 500;
@@ -318,5 +351,7 @@ main .right_main .benner .info span {
     background-color: #000;
     display: inline-block;
     padding: 12px 40px;
+    font-size: 1rem;
 }
+
 footer {width: calc(100% - 340px); float: right;}

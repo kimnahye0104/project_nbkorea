@@ -1,13 +1,100 @@
 @media screen and (max-width: 1340px) {
     main .bg:nth-child(even) {padding: 0;}
     main .right_main {padding: 0 20px 0 20px;}
+    main .bg {width: 100%;}
+
+    /* 배너 영역 */
+    main .right_main .benner {width: 100%;}
+    main .right_main .benner .info em {
+        font-size: 2rem;
+    }
+    main .right_main .benner .info span {
+        margin-top: 15px;
+        padding: 8px 20px;
+        font-size: 0.65rem;
+    }
 
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1160px) {
     main .left_option {display: none;}
     main .m_option_bar {display: block;}
     main .right_main {
         width: 100%;
     }
+
     footer {width: 100%; float: none;}
+}
+
+@media screen and (max-width: 820px) {
+    main .right_main {padding: 0 16px;}
+    main .right_main .top {
+        flex-flow: column nowrap;
+        align-items: flex-end;
+    }
+    main .right_main .top ul {margin-bottom: 20px;}
+    main .right_main .top ul li:last-child {margin: 0;}
+    main .right_main .top ul li label[for*=include] {
+        white-space: nowrap;
+        font-size: 0.75rem;
+    }
+    main .right_main .top ul li label[for*=sale]:last-child::after {
+        display: none; content: '';
+    }
+    main .right_main .top #display_order {
+        margin: 0; font-size: 0.75rem;
+        padding: 0px 30px 0 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        line-height: 26px;
+    }
+    main .right_main .top .select_arrow {
+        background: url(../images/icon_sub2_select_arrow.png) no-repeat 78px 5px;
+        background-size: 20px;
+        background-position-y: center;
+    }
+
+    /* product_list 상하여백 */
+    main .right_main .bg .container .product_list {margin-bottom: 30px; width: 100%;}
+
+    main .right_main .bg .container .product_list:last-child {padding-bottom: 2px;}
+
+    main .right_main .bg .container .product_list li {margin-right: 8px;}
+    /* product_list 글자 디자인 (아래) */
+    main .right_main .bg .container .product_list li > a > .info h3 {font-size: 0.875rem;}
+    main .right_main .bg .container .product_list li > a > .info .price {
+        margin: 5px 0;
+    }
+    main .right_main .bg .container .product_list li > a > .info .price > * {margin-right: 2px;}
+    main .right_main .bg .container .product_list li > a > .info .price del {font-size: 0.725rem;}
+    main .right_main .bg .container .product_list li > a > .info .price span {font-size: 0.8rem;}
+    main .right_main .bg .container .product_list li > a > .info .price em {font-size: 0.875rem; /* display: block; */margin: 3px 0 5px;}
+    
+    main .right_main .bg .container .product_list li > a > .info .review_like .review img,
+    main .right_main .bg .container .product_list li > a > .info .review_like .like img {
+        width: 14px;
+    }
+    main .right_main .bg .container .product_list li > a > .info .review_like > p > *:nth-child(2) {
+        /* 리뷰, 좋아요 글자 크기 : 선택자 */
+        font-size: 0.725rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    main .right_main .bg .container .product_list li > a > .info .price em {display: block;}
+    main .right_main .benner .info {}
+    main .right_main .benner .info em {font-size: 1.8rem;}
+    main .right_main .benner .info span {
+        margin-top: 30px;
+    }
+    main .right_main .benner > p img:first-child {display: none;}
+    main .right_main .benner > p img:last-child {display: block;  width: 100%;}
+}
+@media screen and (max-width: 520px) {
+    main .right_main .bg .container {
+        width: calc(100% -32px);
+    }
+    main .right_main .bg .container .product_list {overflow-x: scroll;}
+    main .right_main .bg .container .product_list::-webkit-scrollbar {background-color: #fff; height: 1px;}
+    main .right_main .bg .container .product_list li > a > .info h3 {font-size: 0.75rem;}
+    main .right_main .bg .container .product_list li > a > .info .price em {font-size: 0.75rem;}
 }

@@ -292,7 +292,7 @@ header .main_head .right .login_join a:first-child::after {
 }
 header .main_head .right .my_cart {margin: 0;}
 /* header -------------------- */
-footer {background-color: #232323; color: #fff;}
+footer {width: 100%; background-color: #232323; color: #fff;}
 footer .container {
     width: 100%; margin: 0 auto;
     padding: 60px 0 30px 43px;
