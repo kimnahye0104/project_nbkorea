@@ -1,5 +1,5 @@
 # NB KOREA
-`클론 코딩 + 반응형, hover 기능 추가 등으로 기존 사이트 보완 개선`
+`리디자인 + 반응형, hover 기능 추가 등으로 기존 사이트 보완 개선`
 * **type :** 웹사이트 (website)
 * **responsive :** `반응형` ( desktop / tablet / mobile )
 * **date :** 24.06.18 ~ 진행 중...
@@ -9,7 +9,7 @@
 
 ### 주소 (url)
 #### 메인 페이지
-<http://knhweb.dothome.co.kr/project/nbkorea_project/index.html>
+<http://knhweb.dothome.co.kr/portfolio/project_nbkorea/index.html>
 #### 서브 페이지 (2개)
 * `메인페이지 > header nav 클릭 후 서브` <http://knhweb.dothome.co.kr/project/nbkorea_project/sub1.html>
 * `메인페이지 > 상품 클릭 후 서브` <http://knhweb.dothome.co.kr/project/nbkorea_project/sub2.html>
