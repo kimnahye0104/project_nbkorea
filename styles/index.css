@@ -53,10 +53,9 @@ main .bg .container a[class*=all] {
 /* bg container 공통 선택자(위) --------------------------------------------------------------- */
 /* bg container 공통 선택자(위) --------------------------------------------------------------- */
 main .bg1 {width: 100%;}
-main .bg1 .container {}
+main .bg1 .container {width: 100%;}
 main .bg1 .container .bg1_main {}
-main .bg1 .container .bg1_main p {}
-main .bg1 .container .bg1_main p img {width: 100%;}
+main .bg1 .container .bg1_main video {width: 100%;}
 main .bg1 .container .info {}
 main .bg1 .container .info .title {margin: 60px 0;}
 main .bg1 .container .info .title h2 {}

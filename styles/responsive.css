@@ -2,8 +2,11 @@
 @media screen and (max-width: 1340px) {/* 태블릿 1200px에서 보이는 디자인 */
     header > .top {padding: 0 30px;}
     header .main_head {padding: 0 30px;}
+
+
     main .bg {width: calc(100% - 60px); margin: 0 auto;}
     main .bg1 {width: 100%;}
+
     main .bg .product {width: 100%;}
     main .bg2 .product > *,
     main .bg3 .product > * {width: calc((100% - 40px) / 4);}
